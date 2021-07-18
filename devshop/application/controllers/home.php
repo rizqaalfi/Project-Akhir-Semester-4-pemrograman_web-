@@ -24,4 +24,28 @@ class Home extends CI_Controller
     $data['produk'] = $this->shop_model->getProductDetails($where, 'tbl_produk')->result();
     $this->template_cus->views('cust/content/product-details', $data);
   }
+
+  function Kategori($id)
+  {
+    $where = array('id_kategori' => $id);
+    $data['produk'] = $this->shop_model->getProductDetails($where, 'tbl_kategori')->result();
+    $this->template_cus->views('cust/content/product', $data);
+  }
+
+  function addCart()
+  {
+
+    $redirect_page = $this->input->post('redirect_page');
+
+    $data = array(
+      'id'      => $this->input->post('id'),
+      'qty'     => $this->input->post('qty'),
+      'price'   => $this->input->post('price'),
+      'name'    => $this->input->post('name')
+
+    );
+
+    $this->cart->insert($data);
+    redirect($redirect_page, 'refresh');
+  }
 }
