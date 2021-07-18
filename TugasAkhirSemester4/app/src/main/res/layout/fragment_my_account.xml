@@ -22,7 +22,7 @@
 
             <include layout="@layout/your_recent_orders_layout" />
 
-            <include layout="@layout/my_addresses_layout" />
+            <include layout="@layout/my_adresses_layout" />
 
             <Button
                 android:id="@+id/sign_out_btn"

@@ -1,6 +1,4 @@
 package com.rafli.tugasakhirsemester4;
-package com.ashish.mymall;
-
 
 import android.os.Bundle;
 

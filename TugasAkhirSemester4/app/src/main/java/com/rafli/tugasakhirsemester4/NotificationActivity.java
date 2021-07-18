@@ -27,7 +27,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static com.ashish.mymall.MainActivity.showCart;
+import static com.rafli.tugasakhirsemester4.MainActivity.showCart;
 
 public class NotificationActivity extends AppCompatActivity {
 

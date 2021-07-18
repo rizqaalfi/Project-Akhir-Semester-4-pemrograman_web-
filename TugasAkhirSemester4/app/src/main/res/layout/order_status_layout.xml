@@ -23,16 +23,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <ImageView
         android:id="@+id/current_order_image"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:src="@mipmap/mobile"
-        app:civ_border_color="#6b01ff"
-        app:civ_border_width="5dp"
+        android:src="@mipmap/kemeja"
         android:elevation="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,27 +70,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_current_order_status">
-
-        <ImageView
-            android:id="@+id/ordered_indicator"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:tint="@color/recyclerviewBackground"
-            android:src="@drawable/selected_dot"
-            android:translationX="12dp" />
-
-        <ProgressBar
-            android:id="@+id/order_packed_progress"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:progress="0"
-            android:progressBackgroundTint="@color/recyclerviewBackground"
-            android:layout_weight="1"
-            android:progressTint="@color/successGreen"
-            android:translationX="8dp"
-            tools:layout_editor_absoluteX="85dp"
-            tools:layout_editor_absoluteY="581dp" />
 
         <ImageView
             android:id="@+id/packed_indicator"
@@ -142,6 +119,7 @@
             android:src="@drawable/selected_dot"
             android:tint="@color/recyclerviewBackground"
             android:translationX="-12dp" />
+
 
     </LinearLayout>
 

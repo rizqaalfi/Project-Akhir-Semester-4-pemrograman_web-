@@ -1,3 +1,66 @@
 <resources>
     <string name="app_name">TugasAkhirSemester4</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string-array name="indonesia_states">
+        <item>Ambon</item>
+        <item>Aceh</item>
+        <item>Bandung</item>
+        <item>Banten</item>
+        <item>Bali</item>
+        <item>Bogor</item>
+        <item>Cimahi</item>
+        <item>Cibaduyut</item>
+        <item>Cibubur</item>
+        <item>Depok</item>
+        <item>Denpasar</item>
+        <item>Dumai</item>
+        <item>Ende</item>
+        <item>Enrekang</item>
+        <item>Flores</item>
+        <item>Fak-Fak</item>
+        <item>Gresik</item>
+        <item>Gunung Kidul</item>
+        <item>Gianyar</item>
+        <item>Indagiri hilir</item>
+        <item>Irian Jaya</item>
+        <item>Jember</item>
+        <item>Jombang</item>
+        <item>Jakarta</item>
+        <item>Kendari</item>
+        <item>Kupang</item>
+        <item>Lamongan</item>
+        <item>Loksumawe</item>
+        <item>Lumajang</item>
+        <item>Madura</item>
+        <item>Madiun</item>
+        <item>Makassar</item>
+        <item>Nganjuk</item>
+        <item>Ngawi</item>
+        <item>Ogan Ilir</item>
+        <item>Probolinggo</item>
+        <item>Padang</item>
+        <item>Situbondo</item>
+        <item>Sabang</item>
+        <item>Serang</item>
+        <item>Tangerang</item>
+    </string-array>
+
 </resources>

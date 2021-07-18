@@ -18,7 +18,7 @@
         app:layout_constraintBottom_toTopOf="@+id/coupan_redemption_layout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/mobile" />
+        app:srcCompat="@mipmap/kemeja" />
 
     <TextView
         android:id="@+id/product_title"
@@ -38,7 +38,7 @@
         android:id="@+id/free_coupan_icon"
         android:layout_width="25dp"
         android:layout_height="20dp"
-        android:color="#8000ff"
+        android:tint="#8000ff"
         app:layout_constraintBottom_toBottomOf="@+id/tv_free_coupan"
         app:layout_constraintStart_toStartOf="@+id/product_title"
         app:layout_constraintTop_toBottomOf="@+id/product_title"
@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:text="Rs.49999/-"
+        android:text="Rp. 99.000/-"
         android:textColor="#000000"
         android:textSize="22sp"
         android:textStyle="bold"
@@ -71,7 +71,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:text="Rs.59999/-"
+        android:text="Rp. 149.000/-"
         app:layout_constraintBottom_toBottomOf="@+id/product_price"
         app:layout_constraintEnd_toStartOf="@+id/product_price" />
 
@@ -192,6 +192,6 @@
         app:layout_constraintBottom_toTopOf="@+id/product_price"
         app:layout_constraintEnd_toEndOf="@+id/product_title"
         app:layout_constraintTop_toTopOf="@+id/product_title"
-        app:srcCompat="@mipmap/cod1" />
+        app:srcCompat="@mipmap/cod3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

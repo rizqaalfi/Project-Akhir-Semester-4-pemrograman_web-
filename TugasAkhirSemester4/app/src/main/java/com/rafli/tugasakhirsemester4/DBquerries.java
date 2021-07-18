@@ -98,7 +98,7 @@ public class DBquerries {
 
     }
 
-    public static void loadFragmentData(final RecyclerView myMallRecyclerView, final Context context, final int index, String categoryName){
+    public static void loadFragmentData(final RecyclerView DevitaCollectionRecyclerView, final Context context, final int index, String categoryName){
 
         firebaseFirestore.collection("CATEGORIES")
                 .document(categoryName.toUpperCase())
@@ -523,7 +523,7 @@ public class DBquerries {
                                 context.startActivity(new Intent(context, AddAddressActivity.class).putExtra("INTENT","deliveryIntent"));
                             }else {
                                 for(long x=1;x<=(long)task.getResult().get("list_size");x++){
-                                    addressesModelList.add(new AddressesModel(
+                                    addressesModelList.add(new AdressesModel(
                                             task.getResult().get("city_"+x).toString()
                                             ,task.getResult().get("locality_"+x).toString()
                                             ,task.getResult().get("flat_no_"+x).toString()

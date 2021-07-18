@@ -23,8 +23,8 @@ import androidx.lifecycle.ViewModelProviders;
 import com.rafli.tugasakhirsemester4.DBquerries;
 import com.rafli.tugasakhirsemester4.DeliveryActivity;
 import com.rafli.tugasakhirsemester4.MainActivity;
-import com.ashish.mymall.MyAddressesActivity;
-import com.ashish.mymall.MyOrderItemModel;
+import com.rafli.tugasakhirsemester4.MyAddressesActivity;
+import com.rafli.tugasakhirsemester4.MyOrderItemModel;
 import com.rafli.tugasakhirsemester4.R;
 import com.rafli.tugasakhirsemester4.RegisterActivity;
 import com.rafli.tugasakhirsemester4.UpdateUserInfoActivity;
@@ -49,7 +49,7 @@ public class MyAccountFragment extends Fragment {
     private FloatingActionButton settingsBtn;
     public final static int MANAGE_ADDRESS =1;
     private Button viewAllAddressButton,signOutBtn;
-    private CircleImageView profileView,currentOrderImage;
+    private ImageView profileView,currentOrderImage;
     private TextView name,email,currentOrderstatus,recentOrdersTitle,addressname,address,pincode;
     private LinearLayout layoutContainer,recentOrdersContainer;
     private Dialog loadingDialog;
@@ -73,7 +73,7 @@ public class MyAccountFragment extends Fragment {
         shippedIndicator=root.findViewById(R.id.shipped_indicator);
         deliveredIndicator=root.findViewById(R.id.delivered_indicator);
 
-        O_P_progress=root.findViewById(R.id.order_packed_progress);
+        O_P_progress=root.findViewById(R.id.ordered_packed_progress);
         P_S_progress=root.findViewById(R.id.packed_shipped_progress);
         S_D_progress=root.findViewById(R.id.shipped_delivered_progress);
 
@@ -106,7 +106,7 @@ public class MyAccountFragment extends Fragment {
                     if(!orderItemModel.isCancellationrequested()){
                         if(!orderItemModel.getOrderStatus().equals("Delivered") && !orderItemModel.getOrderStatus().equals("Cancelled")){
                             layoutContainer.getChildAt(1).setVisibility(View.VISIBLE);
-                            Glide.with(getContext()).load(orderItemModel.getProductImage()).apply(new RequestOption().placeholder(R.mipmap.pic)).into(currentOrderImage);
+                            Glide.with(getContext()).load(orderItemModel.getProductImage()).apply(new RequestOptions().placeholder(R.mipmap.pic)).into(currentOrderImage);
                             currentOrderstatus.setText(orderItemModel.getOrderStatus());
 
                             switch (orderItemModel.getOrderStatus()){

@@ -9,12 +9,12 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 
-import com.ashish.mymall.ui.my_account.MyAccountFragment;
-import com.ashish.mymall.ui.my_cart.MyCartFragment;
-import com.ashish.mymall.ui.my_mall.MyMallFragment;
-import com.ashish.mymall.ui.my_orders.MyOrdersFragment;
-import com.ashish.mymall.ui.my_rewards.MyRewardsFragment;
-import com.ashish.mymall.ui.my_wishlist.MyWishlistFragment;
+import com.rafli.tugasakhirsemester4.ui.my_account.MyAccountFragment;
+import com.rafli.tugasakhirsemester4.ui.my_cart.MyCartFragment;
+import com.rafli.tugasakhirsemester4.ui.my_devitacollection.DevitaCollectionFragment;
+import com.rafli.tugasakhirsemester4.ui.my_orders.MyOrdersFragment;
+import com.rafli.tugasakhirsemester4.ui.my_rewards.MyRewardsFragment;
+import com.rafli.tugasakhirsemester4.ui.my_wishlist.MyWishlistFragment;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -61,15 +61,15 @@ import android.widget.Toast;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-import static com.ashish.mymall.R.*;
-import static com.ashish.mymall.RegisterActivity.setsignUpFragment;
+import static com.rafli.tugasakhirsemester4.R.*;
+import static com.rafli.tugasakhirsemester4.RegisterActivity.setsignUpFragment;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private FrameLayout frameLayout;
     public static Activity mainActivity;
-    private static final int MyMallFragment=0,CART_FRAGMENT=1,ORDERS_FRAGMENT=2,WISHLIST_FRAGMENT=3,REWARDS_FRAGMENT=4,MYACCOUNT_FRAGMENT=5;
+    private static final int devitaCollectionFragment=0,CART_FRAGMENT=1,ORDERS_FRAGMENT=2,WISHLIST_FRAGMENT=3,REWARDS_FRAGMENT=4,MYACCOUNT_FRAGMENT=5;
     private int currentFragment=-1;
     private ImageView actionbarLogo,noInternet;
     private Window window;
@@ -107,10 +107,11 @@ public class MainActivity extends AppCompatActivity {
         navigationView = findViewById(id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-        mAppBarConfiguration = new AppBarConfiguration.Builder(id.nav_my_mall,
+        AppBarConfiguration.Builder builder = new AppBarConfiguration.Builder(id.nav_devitacollection,
                 id.nav_my_orders, id.nav_my_rewards, id.nav_my_cart,
-                id.nav_my_wishlist, id.nav_my_account, id.nav_sign_out)
-                .setDrawerLayout(drawer)
+                id.nav_my_wishlist, id.nav_my_account, id.nav_sign_out);
+        builder.setDrawerLayout(drawer);
+        mAppBarConfiguration = builder
                 .build();
         NavController navController = Navigation.findNavController(this, id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
@@ -132,20 +133,20 @@ public class MainActivity extends AppCompatActivity {
             gotoFragment("My Cart",new MyCartFragment(),-2);
         }
         else {
-            setFragment(new MyMallFragment(), MyMallFragment);
+            setFragment(new DevitaCollectionFragment(), devitaCollectionFragment);
             ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, string.navigation_drawer_open, string.navigation_drawer_close);
             drawer.addDrawerListener(toggle);
             toggle.syncState();
         }
 
         signInDialog=new Dialog(MainActivity.this);
-        signInDialog.setContentView(layout.sign_in_dialog);
+        signInDialog.setContentView(layout.signin_dialog);
         signInDialog.setCancelable(true);
 
         signInDialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
 
-        Button signInDialogBtn=signInDialog.findViewById(R.id.sign_in_btn);
-        Button signUpDialogBtn=signInDialog.findViewById(R.id.sign_up_btn);
+        Button signInDialogBtn=signInDialog.findViewById(id.sign_in_btn);
+        Button signUpDialogBtn=signInDialog.findViewById(id.sign_up_btn);
 
         signInDialogBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -182,10 +183,10 @@ public class MainActivity extends AppCompatActivity {
                         public void onDrawerClosed(View drawerView) {
                             super.onDrawerClosed(drawerView);
                             int id = menuItem.getItemId();
-                            if (id == R.id.nav_my_mall) {
+                            if (id == R.id.nav_devitacollection) {
                                 actionbarLogo.setVisibility(View.VISIBLE);
                                 invalidateOptionsMenu();
-                                setFragment(new MyMallFragment(), MyMallFragment);
+                                setFragment(new DevitaCollectionFragment(), devitaCollectionFragment);
                                 //navigationView.getMenu().getItem(0).setChecked(true);
                             } else if (id == R.id.nav_my_orders) {
                                 gotoFragment("My Orders", new MyOrdersFragment(), ORDERS_FRAGMENT);
@@ -267,7 +268,7 @@ public class MainActivity extends AppCompatActivity {
         if(resetMainActivity){
             actionbarLogo.setVisibility(View.VISIBLE);
             resetMainActivity=false;
-            setFragment(new MyMallFragment(),MyMallFragment);
+            setFragment(new DevitaCollectionFragment(),devitaCollectionFragment);
             navigationView.getMenu().getItem(0).setChecked(true);
         }
         invalidateOptionsMenu();
@@ -285,7 +286,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        if(currentFragment== MyMallFragment){
+        if(currentFragment== devitaCollectionFragment){
             getSupportActionBar().setDisplayShowTitleEnabled(false);
             getMenuInflater().inflate(R.menu.main, menu);
 
@@ -419,7 +420,7 @@ public class MainActivity extends AppCompatActivity {
         if(drawer.isDrawerOpen(GravityCompat.START)){
             drawer.closeDrawer(GravityCompat.START);
         }else {
-            if(currentFragment==MyMallFragment){
+            if(currentFragment==devitaCollectionFragment){
                 currentFragment=-1;
                 super.onBackPressed();
             }else {
@@ -430,7 +431,7 @@ public class MainActivity extends AppCompatActivity {
                 }else {
                     actionbarLogo.setVisibility(View.VISIBLE);
                     invalidateOptionsMenu();
-                    setFragment(new MyMallFragment(),MyMallFragment);
+                    setFragment(new DevitaCollectionFragment(),devitaCollectionFragment);
                     navigationView.getMenu().getItem(0).setChecked(true);
                 }
             }

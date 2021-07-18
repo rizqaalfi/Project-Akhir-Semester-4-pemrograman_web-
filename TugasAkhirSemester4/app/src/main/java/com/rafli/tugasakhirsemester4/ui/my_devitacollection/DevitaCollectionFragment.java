@@ -29,8 +29,6 @@ import com.rafli.tugasakhirsemester4.R;
 import com.rafli.tugasakhirsemester4.SliderModel;
 import com.rafli.tugasakhirsemester4.WishlistModel;
 import com.bumptech.glide.Glide;
-import com.rafli.tugasakhirsemester4.CategoryAdapter;
-import com.rafli.tugasakhirsemester4.DevitaCollectionModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,13 +44,12 @@ public class DevitaCollectionFragment extends Fragment {
     public static SwipeRefreshLayout swipeRefreshLayout;
     private RecyclerView categoryRecyclerView , homepageRecyclerview;
     private CategoryAdapter categoryAdapter;
-    private DevitaCollectionAdapter DevitaCollectionAdapter;
-
+    private DevitaCollectionAdapter myMallAdapter;
     private ImageView noInternet;
     private Button retryBtn;
 
     private List<CategoryModel> categoryModelFakeList=new ArrayList<>();
-    private List<DevitaCollectionModel> DevitaCollectionModelFakeList=new ArrayList<>();
+    private List<DevitaCollectionModel> devitaCollectionModelFakeList=new ArrayList<>();
 
 
     NetworkInfo networkInfo;
@@ -64,11 +61,11 @@ public class DevitaCollectionFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,ViewGroup container, Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_my_mall, container, false);
+        View view = inflater.inflate(R.layout.fragment_devita_collection, container, false);
         swipeRefreshLayout=view.findViewById(R.id.refresh_layout);
         noInternet=view.findViewById(R.id.no_internet);
         retryBtn=view.findViewById(R.id.retry_btn);
-        homepageRecyclerview =view.findViewById(R.id.my_mall_recyclerview);
+        homepageRecyclerview =view.findViewById(R.id.devita_collection_recyclerview);
         categoryRecyclerView=view.findViewById(R.id.category_recycler_view);
         swipeRefreshLayout.setColorSchemeColors(getContext().getResources().getColor(R.color.colorPrimary),getContext().getResources().getColor(R.color.colorPrimary),getContext().getResources().getColor(R.color.colorPrimary));
 
@@ -117,15 +114,15 @@ public class DevitaCollectionFragment extends Fragment {
         horizontalProductScrollModelFakeList.add(new HorizontalProductScrollModel("","","","",""));
         horizontalProductScrollModelFakeList.add(new HorizontalProductScrollModel("","","","",""));
 
-        DevitaCollectionModelFakeList.add(new DevitaCollectionModel(0,sliderModelFakeList));
-        myMallModelFakeList.add(new MyMallModel(1,"","#dfdfdf"));
-        myMallModelFakeList.add(new MyMallModel(2,"","#dfdfdf",horizontalProductScrollModelFakeList,new ArrayList<WishlistModel>()));
-        myMallModelFakeList.add(new MyMallModel(3,"","#dfdfdf",horizontalProductScrollModelFakeList));
+        devitaCollectionModelFakeList.add(new DevitaCollectionModel(0,sliderModelFakeList));
+        devitaCollectionModelFakeList.add(new DevitaCollectionModel(1,"","#dfdfdf"));
+        devitaCollectionModelFakeList.add(new DevitaCollectionModel(2,"","#dfdfdf",horizontalProductScrollModelFakeList,new ArrayList<WishlistModel>()));
+        devitaCollectionModelFakeList.add(new DevitaCollectionModel(3,"","#dfdfdf",horizontalProductScrollModelFakeList));
 
 //////////home page fake list
 
         categoryAdapter= new CategoryAdapter(categoryModelFakeList);
-        myMallAdapter=new MyMallAdapter(myMallModelFakeList);
+        myMallAdapter=new DevitaCollectionAdapter(devitaCollectionModelFakeList);
 
         connectivityManager=(ConnectivityManager)getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
         networkInfo = connectivityManager.getActiveNetworkInfo();
@@ -147,10 +144,10 @@ public class DevitaCollectionFragment extends Fragment {
 
             if(lists.size() == 0){
                 loadedCategoriesNames.add("HOME");
-                lists.add(new ArrayList<MyMallModel>());
+                lists.add(new ArrayList<DevitaCollectionModel>());
                 loadFragmentData(homepageRecyclerview,getContext(),0,"Home");
             }else {
-                myMallAdapter=new MyMallAdapter(lists.get(0));
+                myMallAdapter=new DevitaCollectionAdapter(lists.get(0));
                 myMallAdapter.notifyDataSetChanged();
             }
             homepageRecyclerview.setAdapter(myMallAdapter);
@@ -199,9 +196,9 @@ public class DevitaCollectionFragment extends Fragment {
             categoryRecyclerView.setVisibility(View.VISIBLE);
             homepageRecyclerview.setVisibility(View.VISIBLE);
             categoryAdapter=new CategoryAdapter(categoryModelFakeList);
-            DevitaCollectionAdapter=new DevitaCollectionAdapter(DevitaCollectionModelFakeList);
-            categoryRecyclerView.setAdapter(CategoryAdapter);
-            homepageRecyclerview.setAdapter(DevitaCollectionAdapter);
+            myMallAdapter=new DevitaCollectionAdapter(devitaCollectionModelFakeList);
+            categoryRecyclerView.setAdapter(categoryAdapter);
+            homepageRecyclerview.setAdapter(myMallAdapter);
 
 
             loadCategories(categoryRecyclerView,getContext());
@@ -210,7 +207,7 @@ public class DevitaCollectionFragment extends Fragment {
             loadFragmentData(homepageRecyclerview,getContext(),0,"Home");
         }else {
             MainActivity.drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
-            Toast.makeText(getContext(),"No internet Connection!",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(),"No internet Connction!",Toast.LENGTH_SHORT).show();
             categoryRecyclerView.setVisibility(View.GONE);
             homepageRecyclerview.setVisibility(View.GONE);
             Glide.with(getContext()).load(R.drawable.no_internet).into(noInternet);

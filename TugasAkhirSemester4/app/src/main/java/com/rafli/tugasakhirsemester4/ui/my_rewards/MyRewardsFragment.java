@@ -12,7 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -20,8 +20,6 @@ import com.rafli.tugasakhirsemester4.DBquerries;
 import com.rafli.tugasakhirsemester4.MyRewardsAdapter;
 import com.rafli.tugasakhirsemester4.R;
 import com.rafli.tugasakhirsemester4.RewardModel;
-import com.rafli.tugasakhirsemester4.DBquerries;
-import com.rafli.tugasakhirsemester4.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +27,7 @@ import java.util.List;
 public class MyRewardsFragment extends Fragment {
     public MyRewardsFragment() {
     }
-    public static MyRewardsFragment rewardsAdapter;
+    public static MyRewardsAdapter rewardsAdapter;
     private Dialog loadingDialog;
     private RecyclerView rewardsRecyclerView;
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -52,7 +50,7 @@ public class MyRewardsFragment extends Fragment {
         linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
         rewardsRecyclerView.setLayoutManager(linearLayoutManager);
 
-        rewardsAdapter=new MyRewardsFragment(DBquerries.rewardModelList,false);
+        rewardsAdapter=new MyRewardsAdapter(DBquerries.rewardModelList,false);
         rewardsRecyclerView.setAdapter(rewardsAdapter);
 
         if(DBquerries.rewardModelList.size() == 0){

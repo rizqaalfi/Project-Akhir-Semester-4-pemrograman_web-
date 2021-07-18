@@ -28,7 +28,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.rafli.tugasakhirsemester4.ui.my_cart.MyCartFragment;
-import com.rafli.tugasakhirsemester4.ui.Devita.MyMallFragment;
+import com.rafli.tugasakhirsemester4.ui.my_devitacollection.DevitaCollectionFragment;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -48,8 +48,8 @@ import java.util.Map;
 
 import javax.xml.parsers.DocumentBuilder;
 
-import static com.ashish.mymall.MainActivity.showCart;
-import static com.ashish.mymall.RegisterActivity.setsignUpFragment;
+import static com.rafli.tugasakhirsemester4.MainActivity.showCart;
+import static com.rafli.tugasakhirsemester4.RegisterActivity.setsignUpFragment;
 
 public class ProductDetailsActivity extends AppCompatActivity {
 
@@ -262,7 +262,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
                                                 }
                                                 totalRatingsFigure.setText(String.valueOf((long) documentSnapshot.get("total_ratings")));
                                                 avgRating.setText(documentSnapshot.get("average_rating").toString());
-                                                productDetailsViewPager.setAdapter(new ProductdetaisAdapter(getSupportFragmentManager(), productDetailsTablayout.getTabCount(), productDescription, productOtherDetails, productSpecificationModelList));
+                                                productDetailsViewPager.setAdapter(new ProductDetailsAdapter(getSupportFragmentManager(), productDetailsTablayout.getTabCount(), productDescription, productOtherDetails, productSpecificationModelList));
 
                                                 if (currentUser != null) {
                                                     if (DBquerries.myRating.size() == 0) {
@@ -651,7 +651,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
 
 /////// sign in dialog box
         signInDialog = new Dialog(ProductDetailsActivity.this);
-        signInDialog.setContentView(R.layout.sign_in_dialog);
+        signInDialog.setContentView(R.layout.signin_dialog);
         signInDialog.setCancelable(true);
 
         signInDialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
