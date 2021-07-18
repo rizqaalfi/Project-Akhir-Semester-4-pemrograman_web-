@@ -4,9 +4,7 @@
 <?php echo @$head; ?>
 
 <body>
-  <!--[if lt IE 8]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+
 
   <!-- Body main wrapper start -->
   <div class="wrapper fixed__footer">
@@ -42,42 +40,36 @@
       <!-- End Search Popap -->
 
       <!-- Start Cart Panel -->
+
+      <?php $cart = $this->cart->contents()  ?>
       <div class="shopping__cart">
+
         <div class="shopping__cart__inner">
           <div class="offsetmenu__close__btn">
             <a href="#"><i class="zmdi zmdi-close"></i></a>
           </div>
+
           <div class="shp__cart__wrap">
             <div class="shp__single__product">
               <div class="shp__pro__thumb">
-                <a href="#">
-                  <img src="<?php echo base_url('assets/cust/tmart/images/product/sm-img/1.jpg') ?>" alt="product images">
-                </a>
+
+                <?php foreach ($cart as $row) { ?>
+                  <a href="#">
+                    <img src="<?php echo base_url('assets/cust/tmart/images/product/sm-img/1.jpg') ?>" alt="product images">
+                  </a>
               </div>
               <div class="shp__pro__details">
-                <h2><a href="<?php echo base_url('assets/cust/tmart/product-details.html') ?>">BO&Play Wireless Speaker</a></h2>
+                <h2><a href="<?php echo base_url('assets/cust/tmart/product-details.html') ?>"><?php echo $row['name'] ?></a></h2>
                 <span class="quantity">QTY: 1</span>
                 <span class="shp__price">$105.00</span>
               </div>
               <div class="remove__btn">
                 <a href="#" title="Remove this item"><i class="zmdi zmdi-close"></i></a>
               </div>
+
+            <?php } ?>
             </div>
-            <div class="shp__single__product">
-              <div class="shp__pro__thumb">
-                <a href="#">
-                  <img src="<?php echo base_url('assets/cust/tmart/images/product/sm-img/2.jpg') ?>" alt="product images">
-                </a>
-              </div>
-              <div class="shp__pro__details">
-                <h2><a href="product-details.html">Brone Candle</a></h2>
-                <span class="quantity">QTY: 1</span>
-                <span class="shp__price">$25.00</span>
-              </div>
-              <div class="remove__btn">
-                <a href="#" title="Remove this item"><i class="zmdi zmdi-close"></i></a>
-              </div>
-            </div>
+
           </div>
           <ul class="shoping__total">
             <li class="subtotal">Subtotal:</li>

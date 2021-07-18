@@ -80,24 +80,32 @@
             <?php foreach ($produk as $row) { ?>
               <!-- Start Single Product -->
               <div class="col-md-3 single__pro col-lg-3 cat--1 col-sm-4 col-xs-12">
+                <?php
+                echo form_open('home/addCart');
+                echo form_hidden('id', $row->id_prd);
+                echo form_hidden('qty', 1);
+                echo form_hidden('price', $row->harga_prd);
+                echo form_hidden('name', $row->nama_prd);
+                echo form_hidden('redirect_page', str_replace('index.php/', '', current_url()));
+                ?>
                 <div class="product foo">
                   <div class="product__inner">
                     <div class="pro__thumb">
                       <a href="<?php echo  base_url('home/detailProduk/' . $row->id_prd) ?>">
-                        <?php echo '<img src="' . base_url('assets/cust/devita/images/' . $row->gambar_prd) . '" >'; ?>
+                        <?php echo '<img height="350" src="' . base_url('assets/cust/devita/images/' . $row->gambar_prd) . '" >'; ?>
 
                       </a>
                     </div>
                     <div class="product__hover__info">
                       <ul class="product__action">
-                        <li><a title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
-                        <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
+
+                        <li><a title="Add TO Cart" href="<?php echo base_url('home/addCart') ?>"><span class="ti-shopping-cart"></span></a></li>
+
                       </ul>
                     </div>
                   </div>
                   <div class="product__details">
-                    <h2><a href="<?php echo  base_url('home/detailProduk/' . $row->id_prd) ?>"><?php echo $row->nama_prd ?></a></h2>
+                    <h2><a href=""><?php echo $row->nama_prd ?></a></h2>
                     <h6>Stok Produk : <?php echo $row->stok_prd ?></h6>
 
                     <ul class="product__price">
@@ -107,6 +115,8 @@
                     </ul>
                   </div>
                 </div>
+
+                <?php echo form_close(); ?>
               </div>
               <!-- End Single Product -->
             <?php } ?>
