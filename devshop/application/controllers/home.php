@@ -81,4 +81,9 @@ class Home extends CI_Controller
     $this->shop_model->delCart($where, 'tbl_keranjang');
     redirect('Home/cart/' . $getUser);
   }
+
+  public function contact()
+  {
+    $this->template_cus->views('cust/content/contact');
+  }
 }

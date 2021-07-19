@@ -39,7 +39,7 @@ foreach ($produk as $row) { ?>
               </div>
 
               <div class="pro__details">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod temf incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, nostr exercitation ullamco laboris nisi ut aliquip ex ea. </p>
+                <p><?php echo nl2br(str_replace('', '', htmlspecialchars($row->deskripsi_prd))); ?> </p>
               </div>
               <ul class="pro__dtl__prize">
                 <!-- <li class="old__prize">$15.21</li> -->
