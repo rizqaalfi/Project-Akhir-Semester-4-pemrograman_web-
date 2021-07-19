@@ -78,16 +78,11 @@
           <div class="product__list another-product-style">
 
             <?php foreach ($produk as $row) { ?>
+
               <!-- Start Single Product -->
               <div class="col-md-3 single__pro col-lg-3 cat--1 col-sm-4 col-xs-12">
-                <?php
-                echo form_open('home/addCart');
-                echo form_hidden('id', $row->id_prd);
-                echo form_hidden('qty', 1);
-                echo form_hidden('price', $row->harga_prd);
-                echo form_hidden('name', $row->nama_prd);
-                echo form_hidden('redirect_page', str_replace('index.php/', '', current_url()));
-                ?>
+
+
                 <div class="product foo">
                   <div class="product__inner">
                     <div class="pro__thumb">
@@ -96,13 +91,7 @@
 
                       </a>
                     </div>
-                    <div class="product__hover__info">
-                      <ul class="product__action">
 
-                        <li><a title="Add TO Cart" href="<?php echo base_url('home/addCart') ?>"><span class="ti-shopping-cart"></span></a></li>
-
-                      </ul>
-                    </div>
                   </div>
                   <div class="product__details">
                     <h2><a href=""><?php echo $row->nama_prd ?></a></h2>
@@ -116,10 +105,13 @@
                   </div>
                 </div>
 
-                <?php echo form_close(); ?>
+
               </div>
-              <!-- End Single Product -->
+
             <?php } ?>
+
+            <!-- End Single Product -->
+
 
 
           </div>

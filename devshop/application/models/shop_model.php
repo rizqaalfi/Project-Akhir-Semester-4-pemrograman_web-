@@ -37,4 +37,9 @@ class Shop_model extends ci_model
     $query = $this->db->get();
     return $query;
   }
+
+  function addCart($data, $table)
+  {
+    $this->db->insert($table, $data);
+  }
 }

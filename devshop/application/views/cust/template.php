@@ -40,8 +40,6 @@
       <!-- End Search Popap -->
 
       <!-- Start Cart Panel -->
-
-      <?php $cart = $this->cart->contents()  ?>
       <div class="shopping__cart">
 
         <div class="shopping__cart__inner">
@@ -53,13 +51,13 @@
             <div class="shp__single__product">
               <div class="shp__pro__thumb">
 
-                <?php foreach ($cart as $row) { ?>
-                  <a href="#">
-                    <img src="<?php echo base_url('assets/cust/tmart/images/product/sm-img/1.jpg') ?>" alt="product images">
-                  </a>
+
+                <a href="#">
+                  <img src="<?php echo base_url('assets/cust/tmart/images/product/sm-img/1.jpg') ?>" alt="product images">
+                </a>
               </div>
               <div class="shp__pro__details">
-                <h2><a href="<?php echo base_url('assets/cust/tmart/product-details.html') ?>"><?php echo $row['name'] ?></a></h2>
+                <h2><a href="<?php echo base_url('assets/cust/tmart/product-details.html') ?>"></a></h2>
                 <span class="quantity">QTY: 1</span>
                 <span class="shp__price">$105.00</span>
               </div>
@@ -67,7 +65,7 @@
                 <a href="#" title="Remove this item"><i class="zmdi zmdi-close"></i></a>
               </div>
 
-            <?php } ?>
+
             </div>
 
           </div>

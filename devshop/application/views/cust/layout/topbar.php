@@ -6,9 +6,6 @@
          <div class="logo"><a href="<?php echo  base_url('home/') ?>">
              <img src="<?php echo base_url('assets/cust/devita/logo/logo.png') ?> " alt="">
            </a>
-
-
-
          </div>
        </div>
        <!-- Start MAinmenu Ares -->
