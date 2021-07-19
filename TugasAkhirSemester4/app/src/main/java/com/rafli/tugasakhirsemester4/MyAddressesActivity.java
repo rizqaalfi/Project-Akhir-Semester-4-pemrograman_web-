@@ -31,7 +31,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static com.ashish.mymall.DeliveryActivity.SELECT_ADDRESS;
+import static com.rafli.tugasakhirsemester4.DeliveryActivity.SELECT_ADDRESS;
 
 public class MyAddressesActivity extends AppCompatActivity {
 

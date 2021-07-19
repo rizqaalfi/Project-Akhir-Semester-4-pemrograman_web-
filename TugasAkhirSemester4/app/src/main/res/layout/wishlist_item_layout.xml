@@ -18,7 +18,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/mobile" />
+        app:srcCompat="@mipmap/kemeja" />
 
     <TextView
         android:id="@+id/product_title"
@@ -27,7 +27,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:text="Realme 5 pro"
+        android:text="Kemeja Lengan Pendek"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,7 +38,7 @@
         android:id="@+id/coupan_icon"
         android:layout_width="15dp"
         android:layout_height="15dp"
-        android:tint="#8000ff"
+        android:color="#8000ff"
         app:layout_constraintBottom_toBottomOf="@+id/free_coupan"
         app:layout_constraintStart_toStartOf="@+id/product_title"
         app:layout_constraintTop_toTopOf="@+id/free_coupan"
@@ -103,7 +103,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="Rs.49999/-"
+        android:text="Rp. 99.000/-"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -115,7 +115,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="Rs.59999/-"
+        android:text="Rp. 149.000/-"
         app:layout_constraintBottom_toBottomOf="@+id/product_price"
         app:layout_constraintStart_toEndOf="@+id/product_price" />
 

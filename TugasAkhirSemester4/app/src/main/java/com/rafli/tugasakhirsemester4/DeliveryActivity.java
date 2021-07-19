@@ -33,7 +33,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.ashish.mymall.ui.my_cart.MyCartFragment;
+import com.rafli.tugasakhirsemester4.ui.my_devitacollection.DevitaCollectionFragment;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;

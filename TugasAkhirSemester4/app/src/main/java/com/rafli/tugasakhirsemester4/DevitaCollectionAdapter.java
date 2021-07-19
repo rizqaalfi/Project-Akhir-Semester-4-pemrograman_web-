@@ -13,8 +13,6 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import androidx.gridlayout.widget.GridLayout;
-
-import android.widget.GridLayout;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -28,6 +26,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
@@ -39,7 +38,7 @@ public class DevitaCollectionAdapter extends RecyclerView.Adapter {
     private RecyclerView.RecycledViewPool recycledViewPool;
     private int lastPos=-1;
 
-    public DevitaCollectionAdapter(List<DevitaCollectionModel> myMallModelList) {
+    public DevitaCollectionAdapter(List<DevitaCollectionModel> devitaCollectionModelList) {
         this.DevitaCollectionModelList = DevitaCollectionModelList;
         recycledViewPool=new RecyclerView.RecycledViewPool();
     }
@@ -74,7 +73,7 @@ public class DevitaCollectionAdapter extends RecyclerView.Adapter {
                 View StripAdview= LayoutInflater.from(parent.getContext()).inflate(R.layout.strip_ad_layout,parent,false);
                 return new StripAdBannerViewHolder(StripAdview);
             case DevitaCollectionModel.HORIZONTAL_PRODUCT_VIEW:
-                View horizontalproductview= LayoutInflater.from(parent.getContext()).inflate(R.layout.horizontal_scoll_layout,parent,false);
+                View horizontalproductview= LayoutInflater.from(parent.getContext()).inflate(R.layout.horizontal_scroll_layout,parent,false);
                 return new HorizontalProductViewHolder(horizontalproductview);
             case DevitaCollectionModel.GRID_PRODUCT_VIEW:
                 View gridproductview= LayoutInflater.from(parent.getContext()).inflate(R.layout.grid_product_layout,parent,false);

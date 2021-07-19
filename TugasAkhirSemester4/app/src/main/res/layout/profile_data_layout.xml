@@ -50,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:text="John Doe"
+            android:text="M. Tahajudin Arrofi"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="20sp"
@@ -60,7 +60,7 @@
             android:id="@+id/user_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="johndoe@gmail.com"
+            android:text="mtarrofi4@gmail.com"
             android:textAlignment="center"
             android:textColor="#000000" />
     </LinearLayout>

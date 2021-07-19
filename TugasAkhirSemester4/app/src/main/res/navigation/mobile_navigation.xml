@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/nav_my_mall">
+    app:startDestination="@id/nav_devitacollection">
 
     <fragment
         android:id="@+id/nav_my_orders"
@@ -36,8 +36,8 @@
         tools:layout="@layout/fragment_my_account" />
 
     <fragment
-        android:id="@+id/nav_my_mall"
+        android:id="@+id/nav_devitacollection"
         android:name="com.rafli.tugasakhirsemester4.ui.my_devitacollection.DevitaCollectionFragment"
-        android:label="Devita Collection"
-        tools:layout="@layout/fragment_my_mall" />
+        android:label="My Mall"
+        tools:layout="@layout/fragment_devita_collection" />
 </navigation>

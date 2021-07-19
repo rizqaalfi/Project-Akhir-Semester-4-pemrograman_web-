@@ -48,7 +48,7 @@
         app:layout_constraintEnd_toStartOf="@+id/payment_divider"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView24"
-        android:src="@mipmap/cod1" />
+        android:src="@mipmap/cod3" />
 
     <ImageButton
         android:id="@+id/paytm"
@@ -64,7 +64,7 @@
         app:layout_constraintStart_toEndOf="@+id/payment_divider"
         app:layout_constraintTop_toBottomOf="@+id/textView24"
         app:layout_constraintVertical_bias="0.50"
-        android:src="@mipmap/paytm"/>
+        android:src="@mipmap/dana"/>
 
     <TextView
         android:id="@+id/cod_btn_title"
@@ -91,7 +91,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
-        android:text="Paytm"
+        android:text="Dana"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"

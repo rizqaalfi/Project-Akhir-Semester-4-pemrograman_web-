@@ -25,7 +25,7 @@
                 android:id="@+id/action_bar_logo"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:src="@mipmap/logo"
+                android:src="@mipmap/logodevitacollection"
                 android:adjustViewBounds="true"/>
 
         </androidx.appcompat.widget.Toolbar>

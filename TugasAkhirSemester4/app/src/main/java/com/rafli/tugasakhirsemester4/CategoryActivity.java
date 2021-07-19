@@ -21,7 +21,7 @@ import static com.rafli.tugasakhirsemester4.DBquerries.loadedCategoriesNames;
 public class CategoryActivity extends AppCompatActivity {
 
     private RecyclerView categoryRecyclerView;
-    DevitaCollectionAdapter myMallAdapter;
+    DevitaCollectionAdapter devitaCollectionAdapter;
 
     //private List<CategoryModel> categoryModelFakeList=new ArrayList<>();
     private List<DevitaCollectionModel> DevitaCollectionModelFakeList=new ArrayList<>();
@@ -76,7 +76,7 @@ public class CategoryActivity extends AppCompatActivity {
         testingLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         categoryRecyclerView.setLayoutManager(testingLayoutManager);
 
-        myMallAdapter=new DevitaCollectionAdapter(DevitaCollectionModelFakeList);
+        devitaCollectionAdapter=new DevitaCollectionAdapter(DevitaCollectionModelFakeList);
 
 
         int listPosition=0;
@@ -91,12 +91,12 @@ public class CategoryActivity extends AppCompatActivity {
             lists.add(new ArrayList<DevitaCollectionModel>());
             loadFragmentData(categoryRecyclerView,this,loadedCategoriesNames.size()-1,title);
         }else {
-            myMallAdapter=new DevitaCollectionAdapter(lists.get(listPosition));
+            devitaCollectionAdapter=new DevitaCollectionAdapter(lists.get(listPosition));
 
         }
 
-        categoryRecyclerView.setAdapter(myMallAdapter);
-        myMallAdapter.notifyDataSetChanged();
+        categoryRecyclerView.setAdapter(devitaCollectionAdapter);
+        devitaCollectionAdapter.notifyDataSetChanged();
 
 
     }

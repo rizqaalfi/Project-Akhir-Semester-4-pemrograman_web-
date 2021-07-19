@@ -17,7 +17,7 @@
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/mobile" />
+        app:srcCompat="@mipmap/kemeja" />
 
     <TextView
         android:id="@+id/product_title"
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Real me 5 pro"
+        android:text="Kemeja Lengan Pendek"
         android:textColor="#000000"
         android:textSize="22sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="Rs.49999/-"
+        android:text="Rp. 99.000/-"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -72,7 +72,7 @@
         android:layout_height="15dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:tint="@color/recyclerviewBackground"
+        android:color="@color/recyclerviewBackground"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider8"
         app:srcCompat="@drawable/selected_dot" />
@@ -98,7 +98,7 @@
         android:layout_height="15dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="50dp"
-        android:tint="@color/recyclerviewBackground"
+        android:color="@color/recyclerviewBackground"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ordered_indicator"
         app:srcCompat="@drawable/selected_dot" />
@@ -124,7 +124,7 @@
         android:layout_height="15dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="50dp"
-        android:tint="@color/recyclerviewBackground"
+        android:color="@color/recyclerviewBackground"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/packed_indicator"
         app:srcCompat="@drawable/selected_dot" />
@@ -150,7 +150,7 @@
         android:layout_height="15dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="50dp"
-        android:tint="@color/recyclerviewBackground"
+        android:color="@color/recyclerviewBackground"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/shipping_indicator"
         app:srcCompat="@drawable/selected_dot" />
@@ -170,8 +170,8 @@
         android:id="@+id/ordered_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="Sunday, 26th jan 2020 "
+        android:layout_marginStart="10dp"
+        android:text="Friday, 16th july 2021"
         app:layout_constraintBottom_toBottomOf="@+id/ordered_title"
         app:layout_constraintStart_toEndOf="@+id/ordered_title"
         app:layout_constraintTop_toTopOf="@+id/ordered_title" />
@@ -203,8 +203,8 @@
         android:id="@+id/packed_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="Monday, 27th jan 2020"
+        android:layout_marginStart="10dp"
+        android:text="Monday, 17th july 2021"
         app:layout_constraintBottom_toBottomOf="@+id/packed_title"
         app:layout_constraintStart_toEndOf="@+id/packed_title"
         app:layout_constraintTop_toTopOf="@+id/packed_title" />
@@ -235,8 +235,8 @@
         android:id="@+id/shipping_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="tuesday, 28th jan 2020"
+        android:layout_marginStart="10dp"
+        android:text="Saturday, 18th july 2021"
         app:layout_constraintBottom_toBottomOf="@+id/shipping_title"
         app:layout_constraintStart_toEndOf="@+id/shipping_title"
         app:layout_constraintTop_toTopOf="@+id/shipping_title" />
@@ -278,8 +278,8 @@
         android:id="@+id/delivered_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="Wednesday, 29th jan 2020"
+        android:layout_marginStart="10dp"
+        android:text="Monday, 19th july 2021"
         app:layout_constraintBottom_toBottomOf="@+id/delivered_title"
         app:layout_constraintStart_toEndOf="@+id/delivered_title"
         app:layout_constraintTop_toTopOf="@+id/delivered_title" />

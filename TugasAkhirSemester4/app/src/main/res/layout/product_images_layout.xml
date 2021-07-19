@@ -106,7 +106,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="Rs.49999/-"
+        android:text="Rp. 99.000/-"
         android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -118,7 +118,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="Rs.59999/-"
+        android:text="Rp. 149.000/-"
         app:layout_constraintBottom_toBottomOf="@+id/product_price"
         app:layout_constraintStart_toEndOf="@+id/product_price" />
 
@@ -141,7 +141,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/product_title"
         app:layout_constraintVertical_bias="0.276"
-        app:srcCompat="@mipmap/cod1" />
+        app:srcCompat="@mipmap/cod2" />
 
     <TextView
         android:id="@+id/tv_cod_indicator"

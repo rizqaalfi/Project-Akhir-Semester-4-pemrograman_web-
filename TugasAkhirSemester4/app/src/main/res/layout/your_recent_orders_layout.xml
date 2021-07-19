@@ -37,37 +37,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/your_recent_orders_title">
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <ImageView
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_weight="1"
-            android:src="@mipmap/mobile"
-            app:civ_border_color="@color/colorPrimary"
-            app:civ_border_width="4dp" />
+            android:src="@mipmap/kemeja"
+             />
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_weight="1"
-            android:src="@mipmap/banner"
-            app:civ_border_color="@color/colorPrimary"
-            app:civ_border_width="4dp" />
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <ImageView
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_weight="1"
-            android:src="@mipmap/images"
-            app:civ_border_color="@color/colorPrimary"
-            app:civ_border_width="4dp" />
+            android:src="@mipmap/logodevitacollection"
+             />
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <ImageView
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_weight="1"
-            android:src="@mipmap/cod1"
-            app:civ_border_color="@color/colorPrimary"
-            app:civ_border_width="4dp" />
+            android:src="@mipmap/cod2"
+             />
 
 
     </LinearLayout>
