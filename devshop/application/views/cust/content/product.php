@@ -62,11 +62,15 @@
             <div class="filter__menu__container">
               <div class="product__menu">
                 <button data-filter="*" class="is-checked">Semua</button>
-                <button data-filter=".cat--1">Blouse</button>
-                <button data-filter=".cat--2">Jaket</button>
-                <button data-filter=".cat--3">Kemeja</button>
-                <button data-filter=".cat--4">T-shirt</button>
-                <button data-filter=".cat--4">Dress</button>
+                <?php
+                $b = 'blouse';
+                $j = 'jaket';
+                $k = 'kemeja';
+                $d = 'dress'; ?>
+                <button data-filter=".cat--1"><?php echo $b ?></button>
+                <button data-filter=".cat--2"><?php echo  $j  ?></button>
+                <button data-filter=".cat--3"><?php echo  $k ?></button>
+                <button data-filter=".cat--4"><?php echo  $d  ?></button>
               </div>
 
             </div>
@@ -81,8 +85,6 @@
 
               <!-- Start Single Product -->
               <div class="col-md-3 single__pro col-lg-3 cat--1 col-sm-4 col-xs-12">
-
-
                 <div class="product foo">
                   <div class="product__inner">
                     <div class="pro__thumb">

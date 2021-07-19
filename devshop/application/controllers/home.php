@@ -57,6 +57,28 @@ class Home extends CI_Controller
     );
 
     $this->shop_model->addCart($data, 'tbl_keranjang');
-    redirect('cart');
+
+
+    redirect('Home/cart/' . $user);
+  }
+
+  function cart($username)
+  {
+    $where = array('username' => $username);
+    $data['produk'] = $this->shop_model->getCart($where, 'tbl_keranjang')->result();
+    $this->template_cus->views('cust/content/cart', $data);
+  }
+
+  function updateCart()
+  {
+  }
+
+  public function delCart($id)
+  {
+    $getUser = $this->session->userdata('session_user');
+
+    $where = array('id_keranjang' => $id);
+    $this->shop_model->delCart($where, 'tbl_keranjang');
+    redirect('Home/cart/' . $getUser);
   }
 }

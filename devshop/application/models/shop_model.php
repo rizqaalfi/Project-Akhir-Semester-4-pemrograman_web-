@@ -42,4 +42,20 @@ class Shop_model extends ci_model
   {
     $this->db->insert($table, $data);
   }
+
+  function getCart($where, $table)
+  {
+    $this->db->where($where);
+    $this->db->select('*');
+    $this->db->from($table);
+    $this->db->join('tbl_produk', 'tbl_produk.id_prd = ' . $table . '.id_prd');
+    $query = $this->db->get();
+    return $query;
+  }
+
+  function delCart($where, $table)
+  {
+    $this->db->where($where);
+    $this->db->delete($table);
+  }
 }

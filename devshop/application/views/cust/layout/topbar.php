@@ -1,3 +1,7 @@
+ <?php
+  $getUser = $this->session->userdata('session_user');
+  $getGrup = $this->session->userdata('session_grup');
+  ?>
  <!-- Start Mainmenu Area -->
  <div id="sticky-header-with-topbar" class="mainmenu__area sticky__header">
    <div class="container">
@@ -117,9 +121,14 @@
        <div class="col-md-2 col-sm-4 col-xs-3">
          <ul class="menu-extra">
            <li class="search search__open hidden-xs"><span class="ti-search"></span></li>
-           <li><a href="login-register.html"><span class="ti-user"></span></a></li>
+
+
+           <li><a href="login-register.html"><span class="ti-user"></span></a>
+
+           </li>
+
            <li class="cart__menu">
-             <span class="ti-shopping-cart"></span>
+             <a href="<?php echo base_url('Home/cart/' . $getUser) ?>"><span class="ti-shopping-cart"></span></a>
            </li>
 
          </ul>
