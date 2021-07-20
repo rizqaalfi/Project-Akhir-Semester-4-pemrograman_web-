@@ -50,7 +50,7 @@ class Home extends CI_Controller
 
       if ($id == 'id_prd') {
         $data = array(
-          'qty' => $qty + 1,
+          'qty' => $qty += 1,
         );
 
         $where = array(
@@ -78,11 +78,16 @@ class Home extends CI_Controller
     }
   }
 
-  function cart($username)
+  function cart($username = null)
   {
-    $where = array('username' => $username);
-    $data['produk'] = $this->shop_model->getCart($where, 'tbl_keranjang')->result();
-    $this->template_cus->views('cust/content/cart', $data);
+
+    if ($username !== null) {
+      $where = array('username' => $username);
+      $data['produk'] = $this->shop_model->getCart($where, 'tbl_keranjang')->result();
+      $this->template_cus->views('cust/content/cart', $data);
+    } else {
+      redirect('auth');
+    }
   }
 
   function updateCart()

@@ -34,7 +34,7 @@
                     <i class="zmdi zmdi-phone-in-talk"></i>
                   </div>
                   <div class="address-text">
-                    <p>+852117503874 </p>
+                    <p>+62 852 117 503 874 </p>
                   </div>
                 </li>
               </ul>

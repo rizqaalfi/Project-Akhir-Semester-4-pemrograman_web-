@@ -15,6 +15,7 @@
                  <tr>
                    <th class="product-thumbnail">Image</th>
                    <th class="product-name">Product</th>
+                   <th class="product-name">Size</th>
                    <th class="product-price">Price</th>
                    <th class="product-quantity">Quantity</th>
                    <th class="product-subtotal">Total</th>
@@ -26,6 +27,7 @@
                    <tr>
                      <td class="product-thumbnail"><a href="#"><img src="<?php echo base_url('uploads/product/' . $row->gambar_prd) ?>" alt="product img" /></a></td>
                      <td class="product-name"><a href="#"><?php echo $row->nama_prd ?></a></td>
+                     <td class="product-name"><a href="#"><?php echo $row->ukuran_prd ?></a></td>
                      <td class="product-price"><span class="amount"><?php echo $row->harga_prd ?></span></td>
                      <td class="product-quantity"><input type="number" value="<?php echo $row->qty ?>" /></td>
                      <td class="product-subtotal"><?php echo $row->qty * $row->harga_prd ?></td>
@@ -44,24 +46,32 @@
                </div>
 
              </div>
+
              <div class="col-md-4 col-sm-5 col-xs-12">
                <div class="cart_totals">
 
                  <table>
                    <tbody>
+                     <tr class="cart-subtotal">
+                       <th></th>
+                       <td></td>
+                     </tr>
+                     <tr class="shipping">
+                       <th></th>
+                       <td>
+
+                         <p><a class="shipping-calculator-button" href="#">Cart Totals</a></p>
+                       </td>
+                     </tr>
                      <tr class="order-total">
                        <th>Total</th>
                        <td>
-                         <strong>
-                           <span class="amount">
-                             <?php
-                              $tot = 0;
-                              foreach ($produk as $row) {
-                                $tot += $row->qty * $row->harga_prd;
-                              }
-                              echo $tot; ?>
-                           </span>
-                         </strong>
+                         <strong><span class="amount"></span><?php
+                                                              $tot = 0;
+                                                              foreach ($produk as $row) {
+                                                                $tot += $row->qty * $row->harga_prd;
+                                                              }
+                                                              echo $tot; ?></strong>
                        </td>
                      </tr>
                    </tbody>
