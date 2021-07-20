@@ -27,8 +27,13 @@ class Item_m extends CI_Model {
             'id_prd'=> $post['kode'],
             'nama_prd'=> $post['nama'],
             'kategori_prd'=> $post['kategori'],
-            'id'=> $post['unit'],
             'harga_prd'=> $post['harga'],
+            'stok_prd'=> $post['stok'],
+            'S'=> $post['s'],
+            'M'=> $post['m'],
+            'L'=> $post['l'],
+            'XL'=> $post['xl'],
+            'deskripsi'=> $post['deskripsi'],
             'gambar_prd'=> $post['gambar_prd'],
         ];
         $this->db->insert('tbl_produk', $params);
@@ -56,6 +61,9 @@ class Item_m extends CI_Model {
         }
         $this->db->where('id_prd', $post['id']);
         $this->db->update('tbl_produk', $params);
+    }
+    function update_stock_in($data){
+
     }
     
 }

@@ -75,7 +75,7 @@ $getGrup = $this->session->userdata('session_grup');
                       <!-- start message -->
                       <a href="#">
                         <div class="pull-left">
-                          <img src="<?= base_url() ?>assets/admin/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                          <img src="" class="img-circle" alt="User Image">
                         </div>
                         <h4>
                           Support Team
@@ -147,13 +147,13 @@ $getGrup = $this->session->userdata('session_grup');
             <!-- User Account: style can be found in dropdown.less -->
             <li class="dropdown user user-menu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <img src="<?= base_url() ?>assets/admin/assets/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                
                 <span class="hidden-xs"> <?php echo $getUser ?></span>
               </a>
               <ul class="dropdown-menu">
                 <!-- User image -->
                 <li class="user-header">
-                  <img src="<?= base_url() ?>assets/admin/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                  
 
                   <p>
                     <?php echo $getUser ?>
@@ -203,24 +203,9 @@ $getGrup = $this->session->userdata('session_grup');
       <section class="sidebar">
         <!-- Sidebar user panel -->
         <div class="user-panel">
-          <div class="pull-left image">
-            <img src="<?= base_url() ?>assets/admin/assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-          </div>
-          <div class="pull-left info">
-            <p>Alexander Pierce</p>
-            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-          </div>
-        </div>
-        <!-- search form -->
-        <form action="#" method="get" class="sidebar-form">
-          <div class="input-group">
-            <input type="text" name="q" class="form-control" placeholder="Search...">
-            <span class="input-group-btn">
-              <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-              </button>
-            </span>
-          </div>
-        </form>
+          
+
+        
         <!-- /.search form -->
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">

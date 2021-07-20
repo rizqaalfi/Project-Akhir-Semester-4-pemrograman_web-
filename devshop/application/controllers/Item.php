@@ -31,8 +31,14 @@ class Item extends CI_Controller {
         $item ->harga_prd = null;
 		$item ->id_kategori = null;
 		$item ->id = null;
+		$item ->stok_prd = null;
+		$item ->S = null;
+		$item ->M = null;
+		$item ->L = null;
+		$item ->XL = null;
+		$item ->deskripsi_prd = null;
 		$item ->gambar_prd = null;
-
+		
 
         $kategori =$this->kategori_m->get();
         $unit =$this->unit_m->get();
@@ -109,13 +115,12 @@ class Item extends CI_Controller {
 		if($query->num_rows() > 0){
 			$item = $query->row();
 			$kategori =$this->kategori_m->get();
-            $unit =$this->unit_m->get();
+
 
             $data = array(
                 'page'=> 'edit',
                 'row'=> $item,
                 'kategori'=>$kategori,
-                'unit'=>$unit
             );
 			$this->template->load('admin/template','admin/product/form_item', $data);
 		}else{

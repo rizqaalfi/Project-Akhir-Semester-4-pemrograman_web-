@@ -42,20 +42,40 @@
                              <option value="<?=$data->id_kategori?>" <?=$data->id_kategori == $row->id_kategori ? "selected": null ?>><?=$data->nama_kategori?></option>
                              <?php } ?>        
                         </select> 
-                    </div>
-                    <div class="form-group "> <!--from untuk nama dengann menggunakan nama-->
-                        <label>Unit</label>
-                        <select id="unit" class="form-control" name="unit"> 
-                            <option value="">Pilih Unit</option> 
-                             <?php foreach($unit->result() as $key=>$data) { ?>
-                             <option value="<?=$data->id?>" <?=$data->id == $row->id ? "selected": null ?>><?=$data->unit ?></option>
-                             <?php } ?>        
-                        </select> 
-                    </div>
+                    </div>                   
                     <div class="form-group "> <!--from untuk nama dengann menggunakan nama-->
                         <label>Harga</label>
                         <input type="number" class="form-control form-control-user" value="<?=$row->harga_prd?>" required 
                             id="harga" name="harga"  > 
+                    </div>
+                    <div class="form-group "> <!--from untuk nama dengann menggunakan nama-->
+                        <label>stok</label>
+                        <input type="number" class="form-control form-control-user" value="<?=$row->stok_prd?>" required 
+                            id="stok" name="stok"  > 
+                    </div>
+                    <div class="form-group "> <!--from untuk nama dengann menggunakan nama-->
+                        <label>Ukuran Stok</label>
+                    </div>
+                    <div class="form-group "> <!--from untuk nama dengann menggunakan nama-->
+                        <input type="number" class="form-control form-control-user" value="<?=$row->S?>"  
+                            id="s" name="s" placeholder="S" > 
+                    </div>
+                    <div class="form-group "> <!--from untuk nama dengann menggunakan nama-->
+                        <input type="number" class="form-control form-control-user" value="<?=$row->M?>" 
+                            id="m" name="m" placeholder="M" > 
+                    </div>
+                    <div class="form-group "> <!--from untuk nama dengann menggunakan nama-->
+                        <input type="number" class="form-control form-control-user" value="<?=$row->L?>" 
+                            id="l" name="l" placeholder="L" > 
+                    </div>
+                    <div class="form-group "> <!--from untuk nama dengann menggunakan nama-->
+                        <input type="number" class="form-control form-control-user" value="<?=$row->XL?>" 
+                            id="xl" name="xl" placeholder="XL" > 
+                    </div>
+                    <div class="form-group "> <!--from untuk nama dengann menggunakan nama-->
+                        <label>Deskripsi</label>
+                        <input type="textarea" class="form-control form-control-user" value="<?=$row->deskripsi_prd?>" required 
+                            id="deskripsi" name="deskripsi"  > 
                     </div>
                     <div class="form-group "> <!--from untuk nama dengann menggunakan nama-->
                         <label>Gambar</label>

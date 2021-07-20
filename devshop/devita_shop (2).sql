@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 19, 2021 at 07:30 PM
+-- Generation Time: Jul 20, 2021 at 03:37 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -291,7 +291,73 @@ INSERT INTO `tbl_produk` (`id_prd`, `nama_prd`, `kategori_prd`, `harga_prd`, `di
 ('PRD012', 'Loli Rafeila', '1', 125000, 0, 15, 500, 'Deskripsi Product : \r\n - Blouse Casual Lengan Panjang\r\n - Dengan Detail Kupnat Dibagian Depan\r\n - Bentuk Lengan Baloon dengan Mnaset dua Kancing \r\n- Bukaan Dengan Kancing Dibagian Belakang \r\n- SIluet A-line yang Nyaman dan Leluasa untuk untuk Dikenakan\r\n - Material Premium Tidak Stretch dan Tidak Transparent \r\n SKU : A3100265149  \r\n\r\nUkuran Product : \r\nLebar Bahu X Lingkar Dada X Panjang Baju X Panjang lengan\r\n - S (35 CM X 94 CM X 65 CM X 55 CM)\r\n - M (37 CM X 98 CM X 66 CM X 56 CM) \r\n- L (39 CM X 102 CM X 67 CM X 57 CM)\r\n - XL (41 CM X 104 CM X 68 CM X 58 CM) \r\n\r\n Perawatan : Cuci terpisah Gunakan detergen yang lembut Jangan diputar dalam mesin cuci saat pengeringan Jangan gunakan pemutih Setrika suhu rendah', 'f39b6e09bdde780684d3cd0b0c3e8fac.jpg', 0, 0, 0, 0),
 ('PRD013', 'Inara Dress', '4', 90000, 0, 44, 250, '', 'ff1f7d384c83f810602b2ba866fe4ac3.jpg', 0, 0, 0, 0),
 ('PRD014', 'Vinnera', '1', 170000, 0, 30, 500, 'Deskripsi Product : \r\n - Blouse Casual Lengan Panjang\r\n - Dengan Detail Kupnat Dibagian Depan\r\n - Bentuk Lengan Baloon dengan Mnaset dua Kancing \r\n- Bukaan Dengan Kancing Dibagian Belakang \r\n- SIluet A-line yang Nyaman dan Leluasa untuk untuk Dikenakan\r\n - Material Premium Tidak Stretch dan Tidak Transparent \r\n SKU : A3100265149  \r\n\r\nUkuran Product : \r\nLebar Bahu X Lingkar Dada X Panjang Baju X Panjang lengan\r\n - S (35 CM X 94 CM X 65 CM X 55 CM)\r\n - M (37 CM X 98 CM X 66 CM X 56 CM) \r\n- L (39 CM X 102 CM X 67 CM X 57 CM)\r\n - XL (41 CM X 104 CM X 68 CM X 58 CM) \r\n\r\n Perawatan : Cuci terpisah Gunakan detergen yang lembut Jangan diputar dalam mesin cuci saat pengeringan Jangan gunakan pemutih Setrika suhu rendah', 'LINNET Pattern _ No_122 Standing Collar Blouse _ Etsy.jpg', 0, 0, 0, 0),
-('PRD015', 'Jenny Dress', '2', 130000, 0, 17, 250, 'Warna : Lilac, Black, Light Gray, Sage Green\r\nMaterial : Chiffon\r\nSKU :  B1100266001\r\nB1100222002, B1100203003\r\n\r\nUkuran yang Dikenakan Model\r\nSize: M\r\nTinggi Model: 176 cm\r\nLingkar dada x Pinggang x Pinggul : 82cm x 60cm x 88cm\r\n\r\nLingkar Dada    :\r\nS 102 , M 106 , L 110 , XL 114 cm\r\nLebar Bahu  :\r\nS 12 , M 14, L 16 , XL 18 cm\r\nPanjang Tangan :\r\nS 42 , M 44 , L 46 , XL 48 cm\r\nPanjang Baju  :\r\nS 68 , M 70 , L 72, XL 74 cm\r\n\r\nCUCI DENGAN TANGAN\r\nJANGAN GUNAKAN PEMUTIH \r\nHINDARI DRY CLEAN \r\nSETRIKA DENGAN SUHU RENDAH\r\n', 'Purple - Plaid - Point Collar - Unlined - Dresses.jpg', 0, 0, 0, 0);
+('PRD015', 'Jenny Dress', '2', 130000, 0, 17, 250, 'Warna : Lilac, Black, Light Gray, Sage Green\r\nMaterial : Chiffon\r\nSKU :  B1100266001\r\nB1100222002, B1100203003\r\n\r\nUkuran yang Dikenakan Model\r\nSize: M\r\nTinggi Model: 176 cm\r\nLingkar dada x Pinggang x Pinggul : 82cm x 60cm x 88cm\r\n\r\nLingkar Dada    :\r\nS 102 , M 106 , L 110 , XL 114 cm\r\nLebar Bahu  :\r\nS 12 , M 14, L 16 , XL 18 cm\r\nPanjang Tangan :\r\nS 42 , M 44 , L 46 , XL 48 cm\r\nPanjang Baju  :\r\nS 68 , M 70 , L 72, XL 74 cm\r\n\r\nCUCI DENGAN TANGAN\r\nJANGAN GUNAKAN PEMUTIH \r\nHINDARI DRY CLEAN \r\nSETRIKA DENGAN SUHU RENDAH\r\n', 'Purple - Plaid - Point Collar - Unlined - Dresses.jpg', 0, 0, 0, 0),
+('PRD017', 'efd', 'kemeja', 900000, 0, 0, 0, NULL, '', 0, 0, 0, 0),
+('PRD022', 'logo', '4', 60, 0, 6, 0, NULL, 'item_21072077a0dfdffd.png', 3, 4, 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_stock`
+--
+
+CREATE TABLE `tbl_stock` (
+  `stock_id` int(11) NOT NULL,
+  `id_item` int(11) NOT NULL,
+  `type` enum('in','out') NOT NULL,
+  `detail` varchar(200) NOT NULL,
+  `id` int(11) NOT NULL,
+  `qty` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `created` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_supplier`
+--
+
+CREATE TABLE `tbl_supplier` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(100) NOT NULL,
+  `no_telp` varchar(15) NOT NULL,
+  `alamat` varchar(200) NOT NULL,
+  `deskripsi` text DEFAULT NULL,
+  `created` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_supplier`
+--
+
+INSERT INTO `tbl_supplier` (`id`, `nama`, `no_telp`, `alamat`, `deskripsi`, `created`, `updated`) VALUES
+(1, 'fashion.id', '081223564889', 'Surabaya', NULL, '2021-07-07 08:05:39', NULL),
+(2, 'shoes.id', '089223678991', ' lumajang kota', ' toko berbagai macam jenis sepatu', '2021-07-07 08:05:39', '2021-07-12 03:15:05'),
+(7, 'toko baju', '0883467331', ' BWI', ' semua baju', '2021-07-11 14:57:55', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_unit`
+--
+
+CREATE TABLE `tbl_unit` (
+  `id` int(11) NOT NULL,
+  `unit` varchar(100) NOT NULL,
+  `created` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_unit`
+--
+
+INSERT INTO `tbl_unit` (`id`, `unit`, `created`, `updated`) VALUES
+(1, 'PCS', '2021-07-13 05:39:14', NULL),
+(2, 'Buah', '2021-07-13 05:39:25', NULL),
+(3, 'Kilogram', '2021-07-13 05:39:38', NULL);
 
 -- --------------------------------------------------------
 
@@ -369,6 +435,26 @@ ALTER TABLE `tbl_produk`
   ADD PRIMARY KEY (`id_prd`);
 
 --
+-- Indexes for table `tbl_stock`
+--
+ALTER TABLE `tbl_stock`
+  ADD PRIMARY KEY (`stock_id`),
+  ADD KEY `id` (`id`),
+  ADD KEY `tbl_stock_ibfk_1` (`id_item`);
+
+--
+-- Indexes for table `tbl_supplier`
+--
+ALTER TABLE `tbl_supplier`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_unit`
+--
+ALTER TABLE `tbl_unit`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
@@ -401,6 +487,18 @@ ALTER TABLE `tbl_datapengiriman`
 --
 ALTER TABLE `tbl_penjualandetail`
   MODIFY `no_pjl_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
+--
+-- AUTO_INCREMENT for table `tbl_supplier`
+--
+ALTER TABLE `tbl_supplier`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `tbl_unit`
+--
+ALTER TABLE `tbl_unit`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbl_user`

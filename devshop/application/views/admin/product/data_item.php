@@ -26,10 +26,14 @@
                         <th>No</th>
                         <th>kode</th>
                         <th>nama</th>
-                        <th>kategori</th>
-                        
+                        <th>kategori</th>                        
                         <th>harga</th>
                         <th>stok</th>
+                        <th>S</th>
+                        <th>M</th>
+                        <th>L</th>
+                        <th>XL</th>
+                        <th>deskripsi</th>
                         <th>gambar</th>
                         <th>Actions</th>
                     </tr>
@@ -41,10 +45,14 @@
                         <td style="width:5%;"><?=$no++?></td>
                         <td><?=$data->id_prd?></td>
                         <td><?=$data->nama_prd?></td>
-                        <td><?=$data->nama_kategori?></td>
-                        
+                        <td><?=$data->nama_kategori?></td>                        
                         <td><?=$data->harga_prd?></td>
                         <td><?=$data->stok_prd?></td>
+                        <td style="width:5%"><?=$data->S?></td>
+                        <td style="width:5%"><?=$data->M?></td>
+                        <td style="width:5%"><?=$data->L?></td>
+                        <td style="width:5%"><?=$data->XL?></td>
+                        <td style="width:25%"><?=$data->deskripsi_prd?></td>
                         <td>
                             <img src="<?=base_url('uploads/product/'.$data->gambar_prd)?>" style="width:100px">
                         </td>
