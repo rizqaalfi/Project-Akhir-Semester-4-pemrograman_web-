@@ -26,7 +26,7 @@
                     <div class="form-group "> <!--from untuk nama dengann menggunakan nama-->
                         <label>Name</label>
                         <input type="hidden" name="id" value="<?=$row->id_kategori?>">
-                        <input type="nama" class="form-control form-control-user" value="<?=$row->kategori?>" required 
+                        <input type="nama" class="form-control form-control-user" value="<?=$row->nama_kategori?>" required 
                             id="nama" name="nama" placeholder="kategori" > 
                     </div>  
                                 
