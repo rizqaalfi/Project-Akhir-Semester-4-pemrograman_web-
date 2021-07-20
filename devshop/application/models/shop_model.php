@@ -58,4 +58,10 @@ class Shop_model extends ci_model
     $this->db->where($where);
     $this->db->delete($table);
   }
+
+  function cartPlus($where, $data, $table)
+  {
+    $this->db->where($where);
+    $this->db->update($table, $data);
+  }
 }

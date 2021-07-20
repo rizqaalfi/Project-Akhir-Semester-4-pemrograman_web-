@@ -36,30 +36,47 @@ class Home extends CI_Controller
 
   function addCart()
   {
+    $user = $this->input->post('username');
     $id = $this->input->post('id_prd');
     $qty = $this->input->post('qty');
     $harga = $this->input->post('harga_prd');
     $nama = $this->input->post('nama_prd');
-    $user = $this->input->post('username');
     $keranjang = $this->input->post('id_keranjang');
     $ukuran = $this->input->post('ukuran_prd');
 
+    if ($user == null) {
+      echo "<script>alert('Harap Login terlebih dahulu');</script>";
+      redirect('auth');
+    } else {
 
-    $data = array(
-      'id_prd' => $id,
-      'qty' => $qty,
-      'harga_prd' => $harga,
-      'nama_prd' => $nama,
-      'username' => $user,
-      'id_keranjang' => $keranjang,
-      'ukuran_prd' => $ukuran
+      if ($id == 'id_prd') {
+        $data = array(
+          'qty' => $qty + 1,
+        );
 
-    );
+        $where = array(
+          'id' => $id
+        );
 
-    $this->shop_model->addCart($data, 'tbl_keranjang');
+        $this->shop_model->cartPlus($where, $data, 'tbl_keranjang');
+        redirect('Home/cart/' . $user);
+      } else {
 
+        $data = array(
+          'id_prd' => $id,
+          'qty' => $qty,
+          'harga_prd' => $harga,
+          'nama_prd' => $nama,
+          'username' => $user,
+          'id_keranjang' => $keranjang,
+          'ukuran_prd' => $ukuran
 
-    redirect('Home/cart/' . $user);
+        );
+
+        $this->shop_model->addCart($data, 'tbl_keranjang');
+        redirect('Home/cart/' . $user);
+      }
+    }
   }
 
   function cart($username)
@@ -85,5 +102,10 @@ class Home extends CI_Controller
   public function contact()
   {
     $this->template_cus->views('cust/content/contact');
+  }
+
+  public function portofolio()
+  {
+    $this->template_cus->views('cust/content/portofolio');
   }
 }

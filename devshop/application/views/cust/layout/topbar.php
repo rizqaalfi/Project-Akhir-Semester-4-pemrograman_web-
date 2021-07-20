@@ -17,11 +17,7 @@
          <nav class="mainmenu__nav hidden-xs hidden-sm">
            <ul class="main__menu">
              <li class="drop"><a href="<?php echo  base_url('home/') ?>">Home</a></li>
-             <li class="drop"><a href="portfolio-card-box-2.html">portfolio</a>
-               <ul class="dropdown">
-                 <li><a href="portfolio-card-box-2.html">portfolio</a></li>
-                 <li><a href="single-portfolio.html">Single portfolio</a></li>
-               </ul>
+             <li class="drop"><a href="<?php echo base_url('home/portofolio/') ?>">portfolio</a>
              </li>
              <li class="drop"><a href="blog.html">Blog</a>
                <ul class="dropdown">
@@ -112,19 +108,29 @@
        </div>
        <!-- End MAinmenu Ares -->
        <div class="col-md-2 col-sm-4 col-xs-3">
-         <ul class="menu-extra">
+         <!-- <ul class="menu-extra">
            <li class="search search__open hidden-xs"><span class="ti-search"></span></li>
-
-
            <li><a href="login-register.html"><span class="ti-user"></span></a>
-
            </li>
-
            <li class="cart__menu">
              <a href="<?php echo base_url('Home/cart/' . $getUser) ?>"><span class="ti-shopping-cart"></span></a>
            </li>
+         </ul> -->
+         <nav class="mainmenu__nav hidden-xs hidden-sm">
+           <ul class="main__menu">
+             <li class="drop"><a href=""><span class="ti-user"></span></a>
+               <ul class="dropdown">
+                 <li><a href="<?php echo base_url('') ?>">Register</a></li>
+                 <li><a href="<?php echo base_url('auth/') ?>">Login</a></li>
+                 <li><a href="<?php echo base_url('logout/') ?>">Logout</a></li>
+               </ul>
+             </li>
+             <li class="cart__menu">
+               <a href="<?php echo base_url('Home/cart/' . $getUser) ?>"><span class="ti-shopping-cart"></span></a>
+             </li>
 
-         </ul>
+           </ul>
+         </nav>
        </div>
      </div>
      <div class="mobile-menu-area"></div>
