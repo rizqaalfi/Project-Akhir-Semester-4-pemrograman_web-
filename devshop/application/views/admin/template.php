@@ -318,5 +318,22 @@
   })
 </script>
 </body>
+<script>
+    $(document).ready(function() {
+        $(document).on('click', '#select', function(){
+            var id_item =$(this).data('id_item');
+            var kode =$(this).data('kode');
+            var nama =$(this).data('nama');
+            var unit =$(this).data('unit');
+            var stok =$(this).data('stok');
+            $('#id_item').val(id_item);
+            $('#kode').val(kode);
+            $('#nama').val(nama);
+            $('#unit').val(unit);
+            $('#stok').val(stok);
+            $('#modal-item').modal('hide');
+        })
+    })
+</script>
 </html>
  

@@ -39,20 +39,20 @@
                     foreach($row->result() as $key=>$data) { ?>
                     <tr>
                         <td style="width:5%;"><?=$no++?></td>
-                        <td><?=$data->kode?></td>
-                        <td><?=$data->nama?></td>
-                        <td><?=$data->kategori?></td>
+                        <td><?=$data->id_prd?></td>
+                        <td><?=$data->nama_prd?></td>
+                        <td><?=$data->nama_kategori?></td>
                         <td><?=$data->unit?></td>
-                        <td><?=$data->harga?></td>
-                        <td><?=$data->stok?></td>
+                        <td><?=$data->harga_prd?></td>
+                        <td><?=$data->stok_prd?></td>
                         <td>
-                            <img src="<?=base_url('uploads/poduct/'.$data->gambar)?>" style="width:100px">
+                            <img src="<?=base_url('uploads/poduct/'.$data->gambar_prd)?>" style="width:100px">
                         </td>
                         <td class= "text-center" width="160px">
-                            <a href="<?=site_url('item/edit/'.$data->id_item)?>" class="btn btn-primary btn-xs">
+                            <a href="<?=site_url('item/edit/'.$data->id_prd)?>" class="btn btn-primary btn-xs">
                                 <i class="fa fa-pencil"></i>Edit
                             </a>
-                            <a href="<?=site_url('item/del/'.$data->id_item)?>" onclick ="return confirm('Yakin ingin menghapus data??')" class="btn btn-danger btn-primary btn-xs">
+                            <a href="<?=site_url('item/del/'.$data->id_prd)?>" onclick ="return confirm('Yakin ingin menghapus data??')" class="btn btn-danger btn-primary btn-xs">
                                 <i class="fa fa-trash"></i>Delete
                             </a>
                         </td>

@@ -26,12 +26,13 @@ class Item extends CI_Controller {
 
 	public function add(){
 		$item = new stdClass();
-		$item ->id_item = null;
-		$item ->kode = null;
-        $item ->nama = null;
-        $item ->harga = null;
+		$item ->id_prd= null;
+        $item ->nama_prd = null;
+        $item ->harga_prd = null;
 		$item ->id_kategori = null;
 		$item ->id = null;
+		$item ->gambar_prd = null;
+
 
         $kategori =$this->kategori_m->get();
         $unit =$this->unit_m->get();
@@ -60,9 +61,9 @@ class Item extends CI_Controller {
 				echo "<script>window.location='".site_url('item/add')."';</script>";
 			}else{
 
-				if(@$_FILES['gambar']['name'] != null){
-					if($this->upload->do_upload('gambar')) {
-						$post['gambar']= $this->upload->data('file_name');
+				if(@$_FILES['gambar_prd']['name'] != null){
+					if($this->upload->do_upload('gambar_prd')) {
+						$post['gambar_prd']= $this->upload->data('file_name');
 						$this->item_m->add($post);
 						if($this->db->affected_rows() > 0){
 							echo "<script>alert('data berhasil ditambahkan');</script>";

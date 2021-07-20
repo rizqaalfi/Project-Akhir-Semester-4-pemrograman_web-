@@ -34,7 +34,7 @@
                     foreach($row->result() as $key=>$data) { ?>
                     <tr>
                         <td style="width:5%;"><?=$no++?></td>
-                        <td><?=$data->kategori?></td>
+                        <td><?=$data->nama_kategori?></td>
                         <td class= "text-center" width="160px">
                             <a href="<?=site_url('kategori/edit/'.$data->id_kategori)?>" class="btn btn-primary btn-xs">
                                 <i class="fa fa-pencil"></i>Edit

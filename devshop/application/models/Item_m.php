@@ -4,58 +4,58 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Item_m extends CI_Model {
 	public function get($id=null)
 	{
-        $this->db->from('item');
-        $this->db->join('kategori', 'kategori.id_kategori=item.id_kategori');
-        $this->db->join('unit', 'unit.id=item.id');
+        $this->db->from('tbl_produk');
+        $this->db->join('tbl_kategori', 'tbl_kategori.id_kategori=tbl_produk.kategori_prd');
+        $this->db->join('tbl_unit', 'tbl_unit.id=tbl_produk.id');
         if($id != null){
-            $this->db->where('id_item', $id);
+            $this->db->where('id_prd', $id);
             
         }
-        $this->db->order_by('kode', 'asc');
+        $this->db->order_by('id_prd', 'asc');
         $query = $this->db->get();
         return $query;
 		
 	}
     public function del($id)
 	{
-		$this->db->where('id_item', $id);
-		$this->db->delete('item');
+		$this->db->where('id_prd', $id);
+		$this->db->delete('tbl_produk');
 	}
 
     public function add($post){
         $params = [
-            'kode'=> $post['kode'],
-            'nama'=> $post['nama'],
-            'id_kategori'=> $post['kategori'],
+            'id_prd'=> $post['kode'],
+            'nama_prd'=> $post['nama'],
+            'kategori_prd'=> $post['kategori'],
             'id'=> $post['unit'],
-            'harga'=> $post['harga'],
-            'gambar'=> $post['gambar'],
+            'harga_prd'=> $post['harga'],
+            'gambar_prd'=> $post['gambar_prd'],
         ];
-        $this->db->insert('item', $params);
+        $this->db->insert('tbl_produk', $params);
     }
 
     function check_barcode($code, $id = null){
-        $this->db->from('item');
-        $this->db->where('kode', $code);
+        $this->db->from('tbl_produk');
+        $this->db->where('id_prd', $code);
         if($id != null){
-            $this->db->where('id_item !=', $id);
+            $this->db->where('id_prd !=', $id);
         }
         $query = $this->db->get();
         return $query; 
     }
     public function edit($post){
         $params = [
-            'kode'=> $post['kode'],
-            'nama'=> $post['nama'],
-            'id_kategori'=> $post['kategori'],
+            'id_prd'=> $post['kode'],
+            'nama_prd'=> $post['nama'],
+            'kategori_prd'=> $post['kategori'],
             'id'=> $post['unit'],
-            'harga'=> $post['harga'],
+            'harga_prd'=> $post['harga'],
         ];
         if($post['gambar'] != null){
-            $params['gambar'] = $post['gambar'];
+            $params['gambar_prd'] = $post['gambar'];
         }
-        $this->db->where('id_item', $post['id']);
-        $this->db->update('item', $params);
+        $this->db->where('id_prd', $post['id']);
+        $this->db->update('tbl_produk', $params);
     }
     
 }

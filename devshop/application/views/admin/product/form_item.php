@@ -25,13 +25,13 @@
                                 <!--apabila tombol ditekan maka akan melakukan proses pengiputan data-->
                     <div class="form-group "> <!--from untuk nama dengann menggunakan nama-->
                         <label>Kode</label>
-                        <input type="hidden" name="id" value="<?=$row->id_item?>">
-                        <input type="nama" class="form-control form-control-user" value="<?=$row->kode?>" required 
+                        <input type="hidden" name="id" value="<?=$row->id_prd?>">
+                        <input type="nama" class="form-control form-control-user" value="<?=$row->id_prd?>" required 
                             id="kode" name="kode"  > 
                     </div>  
                     <div class="form-group "> <!--from untuk nama dengann menggunakan nama-->
                         <label>Nama</label>
-                        <input type="nama" class="form-control form-control-user" value="<?=$row->nama?>" required 
+                        <input type="nama" class="form-control form-control-user" value="<?=$row->nama_prd?>" required 
                             id="nama" name="nama"  > 
                     </div> 
                     <div class="form-group "> <!--from untuk nama dengann menggunakan nama-->
@@ -39,7 +39,7 @@
                         <select id="kategori" class="form-control" name="kategori"> 
                             <option value="">Pilih Kategori</option> 
                              <?php foreach($kategori->result() as $key=>$data) { ?>
-                             <option value="<?=$data->id_kategori?>" <?=$data->id_kategori == $row->id_kategori ? "selected": null ?>><?=$data->kategori?></option>
+                             <option value="<?=$data->id_kategori?>" <?=$data->id_kategori == $row->id_kategori ? "selected": null ?>><?=$data->nama_kategori?></option>
                              <?php } ?>        
                         </select> 
                     </div>
@@ -54,21 +54,21 @@
                     </div>
                     <div class="form-group "> <!--from untuk nama dengann menggunakan nama-->
                         <label>Harga</label>
-                        <input type="number" class="form-control form-control-user" value="<?=$row->harga?>" required 
+                        <input type="number" class="form-control form-control-user" value="<?=$row->harga_prd?>" required 
                             id="harga" name="harga"  > 
                     </div>
                     <div class="form-group "> <!--from untuk nama dengann menggunakan nama-->
                         <label>Gambar</label>
                         <?php {
-                            if($row->gambar !=null){?>
+                            if($row->gambar_prd !=null){?>
                             <div>
-                            <img src="<?=base_url('uploads/poduct/'.$row->gambar)?>" style="width:100px">
+                            <img src="<?=base_url('uploads/poduct/'.$row->gambar_prd)?>" style="width:100px">
                             </div>
                             <?php
                             }
                         }?>
                         <input type="file" class="form-control form-control-user"  
-                            id="gambar" name="gambar"  > 
+                            id="gambar_prd" name="gambar_prd"  > 
                     </div>
                     
                                 
