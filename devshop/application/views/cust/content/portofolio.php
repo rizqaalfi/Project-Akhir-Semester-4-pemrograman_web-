@@ -1,11 +1,46 @@
+
+    <!-- Start Single Slide -->
+    <div class="slide slider__full--screen slider-height-inherit slider-text-right" style="background: rgba(0, 0, 0, 0) url(<?php echo base_url('assets/cust/devita/slider/slider2.jpg') ?>) no-repeat scroll center center / cover ;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-lg-8 col-md-offset-2 col-lg-offset-4 col-sm-12 col-xs-12">
+            <div class="slider__inner">
+              <h1>New Product <span class="text--theme">Collection</span></h1>
+              <div class="slider__btn">
+                <a class="htc__btn" href="<?php echo base_url('assets/cust/tmart/cart.html') ?>">shop now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+ <!-- Start Bradcaump area -->
+       <div class="ht__bradcaump__area" style="background: rgba(0, 0, 0, 0) <?=base_url('assets/cust/images/bg/2.jpg')?> no-repeat scroll center center / cover ;">
+            <div class="ht__bradcaump__wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="bradcaump__inner text-center">
+                                <h2 class="bradcaump-title"></h2>                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- End Bradcaump area -->
  <!-- End Bradcaump area -->
  <div class="portfolio-grid-area bg__white pt--130 pb--100">
    <div class="container">
      <div class="portfolio-menu-active gutter-btn mb--50 text-center">
-       <button class="active" data-filter="*">All works</button>
-       <button data-filter=".cat2">print</button>
-       <button data-filter=".cat3">Webdesign</button>
-       <button data-filter=".cat5">Photography</button>
+       <h1>
+         Selamat Datang Di Devita Collection
+      </h1>
+      <h4>
+        Devita Collection Merupakan Toko Online Shop Yang Dapat Membantu Penampilan anda, </h4>
+      <h4> Kami Menyediakan Berberapa Jenis Fashion yang dapat membuat penampilan anda lebih menarik</h4>
+ 
      </div>
      <div class="portfolio-style">
        <div class="row grid">
@@ -13,10 +48,10 @@
            <div class="single-portfolio-card mb--30">
              <div class="portfolio-img">
                <a href="single-portfolio.html">
-                 <img src="images/portfolio/equal/1.jpg" alt="" />
+                 <img src="" style="witdh=20%" alt="" />
                </a>
                <div class="portfolio-icon">
-                 <a class="img-poppu" href="images/portfolio/equal/2.jpg">
+                 <a class="img-poppu" href="<?php echo base_url('assets/cust/devita/slider/01.jpg') ?>">
                    <i class="zmdi zmdi-instagram"></i>
                  </a>
                </div>
