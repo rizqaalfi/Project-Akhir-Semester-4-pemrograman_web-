@@ -132,12 +132,3 @@
   </section>
 </div>
 <!-- End Our Product Area -->
-
-<!-- <script>
-  $(document).ready(function() {
-    $('#kategori').change(function() {
-      let a = $(this).val()
-      console.log(a)
-    });
-  });
-</script> -->

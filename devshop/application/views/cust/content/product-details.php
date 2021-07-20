@@ -31,7 +31,8 @@ foreach ($produk as $row) { ?>
               <div class="pro__detl__title">
                 <input type="hidden" name="nama_prd" value="<?php echo $row->nama_prd; ?>">
                 <input type="hidden" name="username" value="<?php echo $getUser ?>">
-                <input type="hidden" name="id_prd" value="<?php echo $row->id_prd; ?>">
+                <input type="hidden" name="id_prd" value="<?php
+                                                          echo $row->id_prd;   ?>">
                 <input type="hidden" name="harga_prd" value="<?php echo $row->harga_prd; ?>">
                 <input type="hidden" name="id_keranjang" value="<?php echo $row->id_prd . $getUser ?>">
                 <h2><?php echo $row->nama_prd ?></h2>

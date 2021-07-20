@@ -147,13 +147,13 @@ $getGrup = $this->session->userdata('session_grup');
             <!-- User Account: style can be found in dropdown.less -->
             <li class="dropdown user user-menu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                
+
                 <span class="hidden-xs"> <?php echo $getUser ?></span>
               </a>
               <ul class="dropdown-menu">
                 <!-- User image -->
                 <li class="user-header">
-                  
+
 
                   <p>
                     <?php echo $getUser ?>
@@ -203,70 +203,70 @@ $getGrup = $this->session->userdata('session_grup');
       <section class="sidebar">
         <!-- Sidebar user panel -->
         <div class="user-panel">
-          
 
-        
-        <!-- /.search form -->
-        <!-- sidebar menu: : style can be found in sidebar.less -->
-        <ul class="sidebar-menu" data-widget="tree">
-          <li class="header">MAIN NAVIGATION</li>
-          <li <?= $this->uri->segment(1) == 'dashboard' || $this->uri->segment(1) == '' ? 'class="active"' : '' ?>>
-            <a href="<?= site_url('dashboard') ?>">
-              <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-            </a>
-          </li>
-          <li <?= $this->uri->segment(1) == 'supplier' ? 'class="active"' : '' ?>>
-            <a href="<?= site_url('supplier') ?>">
-              <i class="fa fa-truck"></i> <span>Supplier</span>
-            </a>
-          </li>
-          <li <?= $this->uri->segment(1) == 'pelanggan' ? 'class="active"' : '' ?>>
-            <a href="<?= site_url('pelanggan') ?>">
-              <i class="fa fa-users"></i> <span>Customer</span>
-            </a>
-          </li>
-          <li class="treeview <?= $this->uri->segment(1) == 'kategori' || $this->uri->segment(1) == 'unit' || $this->uri->segment(1) == 'item' ? "active" : '' ?>">
-            <a href="#">
-              <i class="fa fa-archive"></i>
-              <span>Products</span>
-              <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li <?= $this->uri->segment(1) == 'kategori' ? 'class="active"' : '' ?>><a href="<?= site_url('kategori') ?>"><i class="fa fa-circle-o"></i> Categories</a></li>
-              <li <?= $this->uri->segment(1) == 'unit' ? 'class="active"' : '' ?>><a href="<?= site_url('unit') ?>"><i class="fa fa-circle-o"></i> Unit</a></li>
-              <li <?= $this->uri->segment(1) == 'item' ? 'class="active"' : '' ?>><a href="<?= site_url('item') ?>"><i class="fa fa-circle-o"></i> Items</a></li>
-            </ul>
-          </li>
-          <li class="treeview">
-            <a href="#">
-              <i class="fa fa-shopping-cart"></i>
-              <span>Transaction</span>
-              <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="../layout/top-nav.html"><i class="fa fa-circle-o"></i> Sales</a></li>
-              <li><a href="../layout/boxed.html"><i class="fa fa-circle-o"></i> Stock In</a></li>
-              <li><a href="../layout/fixed.html"><i class="fa fa-circle-o"></i> Stock Out</a></li>
-            </ul>
-          </li>
-          <li class="treeview">
-            <a href="#">
-              <i class="fa fa-pie-chart"></i>
-              <span>Report</span>
-              <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="../layout/top-nav.html"><i class="fa fa-circle-o"></i> Sales</a></li>
-              <li><a href="../layout/boxed.html"><i class="fa fa-circle-o"></i> Stock</a></li>
-            </ul>
-          </li>
-          <li class="header">Setting</li>
-          <li><a href="<?= site_url('user') ?>"><i class="fa fa-user"></i> <span>User</span></a>
-          </li>
-        </ul>
+
+
+          <!-- /.search form -->
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+          <ul class="sidebar-menu" data-widget="tree">
+            <li class="header">MAIN NAVIGATION</li>
+            <li <?= $this->uri->segment(1) == 'dashboard' || $this->uri->segment(1) == '' ? 'class="active"' : '' ?>>
+              <a href="<?= site_url('dashboard') ?>">
+                <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+              </a>
+            </li>
+            <li <?= $this->uri->segment(1) == 'supplier' ? 'class="active"' : '' ?>>
+              <a href="<?= site_url('supplier') ?>">
+                <i class="fa fa-truck"></i> <span>Supplier</span>
+              </a>
+            </li>
+            <li <?= $this->uri->segment(1) == 'pelanggan' ? 'class="active"' : '' ?>>
+              <a href="<?= site_url('pelanggan') ?>">
+                <i class="fa fa-users"></i> <span>Customer</span>
+              </a>
+            </li>
+            <li class="treeview <?= $this->uri->segment(1) == 'kategori' || $this->uri->segment(1) == 'unit' || $this->uri->segment(1) == 'item' ? "active" : '' ?>">
+              <a href="#">
+                <i class="fa fa-archive"></i>
+                <span>Products</span>
+                <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li <?= $this->uri->segment(1) == 'kategori' ? 'class="active"' : '' ?>><a href="<?= site_url('kategori') ?>"><i class="fa fa-circle-o"></i> Categories</a></li>
+                <li <?= $this->uri->segment(1) == 'unit' ? 'class="active"' : '' ?>><a href="<?= site_url('unit') ?>"><i class="fa fa-circle-o"></i> Unit</a></li>
+                <li <?= $this->uri->segment(1) == 'item' ? 'class="active"' : '' ?>><a href="<?= site_url('item') ?>"><i class="fa fa-circle-o"></i> Items</a></li>
+              </ul>
+            </li>
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-shopping-cart"></i>
+                <span>Transaction</span>
+                <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="../layout/top-nav.html"><i class="fa fa-circle-o"></i> Sales</a></li>
+                <li><a href="../layout/boxed.html"><i class="fa fa-circle-o"></i> Stock In</a></li>
+                <li><a href="../layout/fixed.html"><i class="fa fa-circle-o"></i> Stock Out</a></li>
+              </ul>
+            </li>
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-pie-chart"></i>
+                <span>Report</span>
+                <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="../layout/top-nav.html"><i class="fa fa-circle-o"></i> Sales</a></li>
+                <li><a href="../layout/boxed.html"><i class="fa fa-circle-o"></i> Stock</a></li>
+              </ul>
+            </li>
+            <li class="header">Setting</li>
+            <li><a href="<?= site_url('user') ?>"><i class="fa fa-user"></i> <span>User</span></a>
+            </li>
+          </ul>
       </section>
       <!-- /.sidebar -->
     </aside>
@@ -312,6 +312,7 @@ $getGrup = $this->session->userdata('session_grup');
     </script>
 </body>
 <script>
+
     $(document).ready(function() {
         $(document).on('click', '#select', function(){
             var id_prd =$(this).data('id_prd');
@@ -324,7 +325,10 @@ $getGrup = $this->session->userdata('session_grup');
             $('#stok').val(stok_prd);
             $('#modal-item').modal('hide');
         })
-    })
-</script>
-</html>
+
  
+    })
+  })
+</script>
+
+</html>
