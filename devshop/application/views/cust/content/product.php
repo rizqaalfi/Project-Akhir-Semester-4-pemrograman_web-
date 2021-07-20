@@ -9,7 +9,7 @@
             <div class="slider__inner">
               <h1>New Product <span class="text--theme">Collection</span></h1>
               <div class="slider__btn">
-                <a class="htc__btn" href="<?php echo base_url('assets/cust/tmart/cart.html') ?>">shop now</a>
+                <a class="htc__btn" href="<?php echo base_url('shop/blouse') ?>">shop now</a>
               </div>
             </div>
           </div>
@@ -61,16 +61,8 @@
           <div class="col-md-12">
             <div class="filter__menu__container" id="kategori">
               <div class="product__menu">
-                <button data-filter="*" class="is-checked">Semua</button>
-                <?php
-                $b = 'blouse';
-                $j = 'jaket';
-                $k = 'kemeja';
-                $d = 'dress'; ?>
-                <button data-filter=".cat--1"><?php echo $b ?></button>
-                <button data-filter=".cat--2"><?php echo  $j  ?></button>
-                <button data-filter=".cat--3"><?php echo  $k ?></button>
-                <button data-filter=".cat--4"><?php echo  $d  ?></button>
+                <button data-filter="*" class="is-checked">All Product </button>
+
               </div>
 
             </div>

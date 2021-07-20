@@ -21,22 +21,22 @@
              </li>
              <li class="drop"><a href="#">Shop</a>
                <ul class="dropdown">
-                 <li><a href="about.html">blouse</a></li>
-                 <li><a href="shop.html">kemeja</a></li>
-                 <li><a href="shop-sidebar.html">jaket</a></li>
-                 <li><a href="checkout.html">dress</a></li>
+                 <li><a href="<?php echo  base_url('shop/blouse') ?>">blouse</a></li>
+                 <li><a href="<?php echo  base_url('shop/kemeja') ?>">kemeja</a></li>
+                 <li><a href="<?php echo  base_url('shop/jaket') ?>">jaket</a></li>
+                 <li><a href="<?php echo  base_url('shop/dress') ?>">dress</a></li>
 
                </ul>
              </li>
              <li class="drop"><a href="#">pages</a>
                <ul class="dropdown">
                  <li><a href="about.html">About us</a></li>
-                 <li><a href="shop.html">shop</a></li>
-                 <li><a href="shop-sidebar.html">Cart</a></li>
-                 <li><a href="checkout.html">Portofolio</a></li>
-                 <li><a href="login-register.html">login</a></li>
+                 <li><a href="<?php echo base_url('shop/blouse') ?>">shop</a></li>
+                 <li><a href="<?php echo base_url('Home/cart/' . $getUser) ?>">Cart</a></li>
+                 <li><a href="<?php echo base_url('Home/portofolio') ?>">Portofolio</a></li>
+                 <li><a href="<?php echo base_url('Home/auth') ?>">login</a></li>
                  <li><a href="login-register.html">register</a></li>
-                 <li><a href="login-register.html">contact us</a></li>
+                 <li><a href="<?php echo base_url('Home/contact') ?>">contact us</a></li>
                </ul>
              </li>
              <li><a href="<?php echo base_url('Home/contact') ?>">contact</a></li>
@@ -49,10 +49,10 @@
                <li><a href="#">portfolio</a> </li>
                <li class="drop"><a href="#">Shop</a>
                  <ul class="dropdown">
-                   <li><a href="about.html">blouse</a></li>
-                   <li><a href="shop.html">kemeja</a></li>
-                   <li><a href="shop-sidebar.html">jaket</a></li>
-                   <li><a href="checkout.html">dress</a></li>
+                   <li><a href="<?php echo  base_url('shop/blouse') ?>">blouse</a></li>
+                   <li><a href="<?php echo  base_url('shop/kemeja') ?>">kemeja</a></li>
+                   <li><a href="<?php echo  base_url('shop/jaket') ?>">jaket</a></li>
+                   <li><a href="<?php echo  base_url('shop/dress') ?>">dress</a></li>
 
                  </ul>
                <li><a href="#">pages</a>

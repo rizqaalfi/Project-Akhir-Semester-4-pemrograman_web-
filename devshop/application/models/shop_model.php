@@ -64,4 +64,13 @@ class Shop_model extends ci_model
     $this->db->where($where);
     $this->db->update($table, $data);
   }
+
+  public function getprod($where, $table)
+  {
+    $this->db->where($where);
+    $this->db->select('*');
+    $this->db->from($table);
+    $query = $this->db->get();
+    return $query;
+  }
 }
