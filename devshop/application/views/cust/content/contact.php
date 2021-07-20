@@ -1,84 +1,41 @@
 <!-- Start Contact Area -->
 <section class="htc__contact__area ptb--120 bg__white">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-        <div class="htc__contact__container">
-          <div class="htc__contact__address">
-            <h2 class="contact__title">contact info</h2>
-            <div class="contact__address__inner">
-              <!-- Start Single Adress -->
-              <div class="single__contact__address">
-                <div class="contact__icon">
-                  <span class="ti-location-pin"></span>
-                </div>
-                <div class="contact__details">
-                  <p>Location : <br> 77, seventh avenue, Brat road USA.</p>
-                </div>
-              </div>
-              <!-- End Single Adress -->
-            </div>
-            <div class="contact__address__inner">
-              <!-- Start Single Adress -->
-              <div class="single__contact__address">
-                <div class="contact__icon">
-                  <span class="ti-mobile"></span>
-                </div>
-                <div class="contact__details">
-                  <p> Phone : <br><a href="#">+012 345 678 102 </a></p>
-                </div>
-              </div>
-              <!-- End Single Adress -->
-              <!-- Start Single Adress -->
-              <div class="single__contact__address">
-                <div class="contact__icon">
-                  <span class="ti-email"></span>
-                </div>
-                <div class="contact__details">
-                  <p> Mail :<br><a href="#">info@example.com</a></p>
-                </div>
-              </div>
-              <!-- End Single Adress -->
-            </div>
+<center> 
+         <div class="w3-container w3-padding-large w3-light-grey" style="width:90%">
+        <h4 id="contact"><b>Contact Me</b></h4>
+        <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
+          <div class="w3-third w3-grey">
+            <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
+            <p>loisyemima@gmail.com</p>
           </div>
-          <div class="contact-form-wrap">
-            <div class="contact-title">
-              <h2 class="contact__title">Get In Touch</h2>
-            </div>
-            <form id="contact-form" action="mail.php" method="post">
-              <div class="single-contact-form">
-                <div class="contact-box name">
-                  <input type="text" name="name" placeholder="Your Nme*">
-                  <input type="email" name="email" placeholder="Mail*">
-                </div>
-              </div>
-              <div class="single-contact-form">
-                <div class="contact-box subject">
-                  <input type="text" name="subject" placeholder="Subject*">
-                </div>
-              </div>
-              <div class="single-contact-form">
-                <div class="contact-box message">
-                  <textarea name="message" placeholder="Massage*"></textarea>
-                </div>
-              </div>
-              <div class="contact-btn">
-                <button type="submit" class="fv-btn">SEND</button>
-              </div>
-            </form>
+          <div class="w3-third w3-teal">
+            <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
+            <p>Jawa Timur, Banyuwangi</p>
           </div>
-          <div class="form-output">
-            <p class="form-messege"></p>
+          <div class="w3-third w3-grey">
+            <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
+            <p>083111456789</p>
           </div>
         </div>
+        <hr class="w3-opacity">
+        <form action="kirim.php" method="post">
+          <div class="w3-section">
+            <label>Name</label>
+            <input class="w3-input w3-border" type="text" name="nama" required>
+          </div>
+          <div class="w3-section">
+            <label>Email</label>
+            <input class="w3-input w3-border" type="text" name="email" required>
+          </div>
+          <div class="w3-section">
+            <label>Message</label>
+            <input class="w3-input w3-border" type="text" name="pesan" required>
+          </div>
+          <button type="submit" nama="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right">   
+            </i>Send Message</button>
+        </form>
       </div>
-      <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 smt-30 xmt-30">
-        <div class="map-contacts">
-          <div id="googleMap"></div>
-        </div>
-      </div>
-    </div>
-  </div>
+</div>
 </section>
 <!-- End Contact Area -->
 

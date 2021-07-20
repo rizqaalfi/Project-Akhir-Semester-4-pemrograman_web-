@@ -314,16 +314,14 @@ $getGrup = $this->session->userdata('session_grup');
 <script>
     $(document).ready(function() {
         $(document).on('click', '#select', function(){
-            var id_item =$(this).data('id_item');
-            var kode =$(this).data('kode');
-            var nama =$(this).data('nama');
-            var unit =$(this).data('unit');
-            var stok =$(this).data('stok');
-            $('#id_item').val(id_item);
-            $('#kode').val(kode);
-            $('#nama').val(nama);
-            $('#unit').val(unit);
-            $('#stok').val(stok);
+            var id_prd =$(this).data('id_prd');
+            var id_prd =$(this).data('kode');
+            var nama_prd =$(this).data('nama');
+            var stok_prd =$(this).data('stok');
+            $('#id_prd').val(id_prd);
+            $('#kode').val(id_prd);
+            $('#nama').val(nama_prd);
+            $('#stok').val(stok_prd);
             $('#modal-item').modal('hide');
         })
     })

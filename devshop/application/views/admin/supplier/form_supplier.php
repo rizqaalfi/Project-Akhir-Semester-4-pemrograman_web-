@@ -41,7 +41,7 @@
                                 id="address" name="address" placeholder="Alamat" > </textarea>
                     </div>
                     <div class="form-group "> <!--from untuk nama dengann menggunakan nama--> 
-                         <label>Deskripsi</label>                                       <label>Description</label>
+                         <label>Deskripsi</label>                                       
                         <textarea type="nama" class="form-control form-control-user" value="<?=$row->deskripsi?>"
                             id="des" name="des" placeholder="deskripsi" > </textarea>
                     </div>

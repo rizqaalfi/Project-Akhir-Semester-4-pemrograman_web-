@@ -63,7 +63,10 @@ class Item_m extends CI_Model {
         $this->db->update('tbl_produk', $params);
     }
     function update_stock_in($data){
-
+        $qty = $data['qty'];
+        $id_item = $data['id_item'];
+        $sql ="UPDATE tbl_item SET stok = stok + '$qty' WHERE id_item = '$id_item'" ;
+        $this->db->query($sql); 
     }
     
 }

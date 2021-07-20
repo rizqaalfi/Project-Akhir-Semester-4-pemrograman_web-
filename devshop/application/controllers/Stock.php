@@ -24,6 +24,7 @@ class Stock extends CI_Controller {
             $post = $this->input->post(null, TRUE);
             $this->stock_m->add_stock_in($post);
 			
+            $this->item_m->update_stock_in($post); 
             if($this->db->affected_rows() > 0){
 				echo "<script>alert('data berhasil disimpan ');</script>";
 			}

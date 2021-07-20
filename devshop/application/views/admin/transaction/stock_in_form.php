@@ -46,10 +46,6 @@
                     </div>  
                     <div class="form-grup">
                         <div class="row">
-                            <div class="col-md-8">
-                                <label for="unit">Item unit</label>
-                                <input type="text" name="unit" id="unit" value="" class="form-control" readonly>   
-                            </div>
                             <div class="col-md-4">
                                 <label for="unit">Initial Stok</label>
                                 <input type="text" name="stok" id="stok" value="" class="form-control" readonly>   
@@ -101,7 +97,6 @@
                         <tr>
                             <th>Kode</th>
                             <th>Nama</th>
-                            <th>Unit</th>
                             <th>Harga</th>
                             <th>Stok</th>
                             <th>Action</th>
@@ -110,17 +105,16 @@
                     <tbody>
                         <?php foreach($item as $i => $data) { ?>
                         <tr>
-                            <td><?=$data->kode?></td>
-                            <td><?=$data->nama?></td>
-                            <td><?=$data->unit?></td>
-                            <td class="text-right"><?=$data->harga?></td>
-                            <td class="text-right"><?=$data->stok?></td>
+                            <td><?=$data->id_prd?></td>
+                            <td><?=$data->nama_prd?></td>
+                            <td class="text-right"><?=$data->harga_prd?></td>
+                            <td class="text-right"><?=$data->stok_prd?></td>
                             <td class="text-right">
                                 <button class="btn btn-xs btn-info" id="select"
-                                    data-id_item="<?=$data->id_item?>"
-                                    data-kode="<?=$data->kode?>"
-                                    data-nama="<?=$data->nama?>"
-                                    data-stok="<?=$data->stok?>"
+                                    data-id_prd="<?=$data->id_prd?>"
+                                    data-kode="<?=$data->id_prd?>"
+                                    data-nama="<?=$data->nama_prd?>"
+                                    data-stok="<?=$data->stok_prd?>"
                                     >
                                     <i class="fa fa-check"></i>select
                                 </button>
