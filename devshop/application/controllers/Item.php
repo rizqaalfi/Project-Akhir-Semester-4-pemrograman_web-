@@ -47,7 +47,7 @@ class Item extends CI_Controller {
 		$this->template->load('admin/template','admin/product/form_item', $data);
 	}
 	public function proses(){
-		$config['upload_path']          = './uploads/poduct/';
+		$config['upload_path']          = './uploads/product/';
 		$config['allowed_types']        = 'gif|jpg|png|jpeg';
 		$config['max_size']             = 2048;
 		$config['file_name']            = 'item ='.date('ymd').'='.substr(md5(rand()),0,10);

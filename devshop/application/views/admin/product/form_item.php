@@ -62,7 +62,7 @@
                         <?php {
                             if($row->gambar_prd !=null){?>
                             <div>
-                            <img src="<?=base_url('uploads/poduct/'.$row->gambar_prd)?>" style="width:100px">
+                            <img src="<?=base_url('uploads/product/'.$row->gambar_prd)?>" style="width:100px">
                             </div>
                             <?php
                             }
