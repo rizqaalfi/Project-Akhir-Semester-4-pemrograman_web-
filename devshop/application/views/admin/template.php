@@ -227,8 +227,8 @@
             <i class="fa fa-truck"></i> <span>Supplier</span>
           </a>
         </li>
-		    <li>
-          <a href="">
+		    <li <?=$this->uri->segment(1)== 'pelanggan' ? 'class="active"' : ''?>>
+          <a href="<?=site_url('pelanggan')?>">
             <i class="fa fa-users"></i> <span>Customer</span>
           </a>
         </li>

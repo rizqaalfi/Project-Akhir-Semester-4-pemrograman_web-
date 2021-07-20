@@ -30,6 +30,8 @@ class Item extends CI_Controller {
 		$item ->kode = null;
         $item ->nama = null;
         $item ->harga = null;
+		$item ->id_kategori = null;
+		$item ->id = null;
 
         $kategori =$this->kategori_m->get();
         $unit =$this->unit_m->get();
@@ -44,16 +46,61 @@ class Item extends CI_Controller {
 		$this->template->load('admin/template','admin/product/form_item', $data);
 	}
 	public function proses(){
+		$config['upload_path']          = './uploads/poduct/';
+		$config['allowed_types']        = 'gif|jpg|png|jpeg';
+		$config['max_size']             = 2048;
+		$config['file_name']            = 'item ='.date('ymd').'='.substr(md5(rand()),0,10);
+		$this->upload->initialize($config);
+		$this->load->library('upload', $config);
+
 		$post = $this->input->post(null, TRUE);
 		if(isset($_POST['add'])){
-			$this->item_m->add($post);
+			if ($this->item_m->check_barcode($post['kode'])->num_rows() > 0){
+				echo "<script>alert('Data $post[kode] sudah digunakan');</script>";
+				echo "<script>window.location='".site_url('item/add')."';</script>";
+			}else{
+
+				if(@$_FILES['gambar']['name'] != null){
+					if($this->upload->do_upload('gambar')) {
+						$post['gambar']= $this->upload->data('file_name');
+						$this->item_m->add($post);
+						if($this->db->affected_rows() > 0){
+							echo "<script>alert('data berhasil ditambahkan');</script>";
+						}
+						echo "<script>window.location='".site_url('item')."';</script>";
+					}else{
+						$error = $this->upload->display_errors();
+						echo "<script>alert('Data gagal Upload');</script>";
+						echo "<script>window.location='".site_url('item/add')."';</script>";
+					}
+					
+				}
+					
+			}
+			
 		}else if(isset($_POST['edit'])){
-			$this->item_m->edit($post);
+			if ($this->item_m->check_barcode($post['kode'], $post['id'])->num_rows() > 0){
+				echo "<script>alert('Barcode Sama');</script>";
+				echo "<script>window.location='".site_url('item/edit/'.$post['id'])."';</script>";
+			}else{
+				if(@$_FILES['gambar']['name'] != null){
+					if($this->upload->do_upload('gambar')) {
+						$post['gambar']= $this->upload->data('file_name');
+						$this->item_m->edit($post);
+						if($this->db->affected_rows() > 0){
+							//echo "<script>alert('data berhasil disimpan');</script>";
+						}
+						echo "<script>window.location='".site_url('item')."';</script>";
+					}else{
+						$error = $this->upload->display_errors();
+						echo "<script>alert('Data gagal Upload');</script>";
+						echo "<script>window.location='".site_url('item/edit')."';</script>";
+					}
+				}
+			}
+			
 		}
-		if($this->db->affected_rows() > 0){
-			echo "<script>alert('data berhasil disimpan');</script>";
-		}
-		echo "<script>window.location='".site_url('item')."';</script>";
+			
 	}
 
 	public function edit($id){

@@ -9,6 +9,7 @@
 </section>
     
 <section class="content">
+
     <div class ="box">
         <div class="box-header">
             <h3 class="box-title">Data User</h3>
@@ -29,6 +30,7 @@
                         <th>unit</th>
                         <th>harga</th>
                         <th>stok</th>
+                        <th>gambar</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -43,6 +45,9 @@
                         <td><?=$data->unit?></td>
                         <td><?=$data->harga?></td>
                         <td><?=$data->stok?></td>
+                        <td>
+                            <img src="<?=base_url('uploads/poduct/'.$data->gambar)?>" style="width:100px">
+                        </td>
                         <td class= "text-center" width="160px">
                             <a href="<?=site_url('item/edit/'.$data->id_item)?>" class="btn btn-primary btn-xs">
                                 <i class="fa fa-pencil"></i>Edit

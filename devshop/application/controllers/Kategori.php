@@ -19,9 +19,9 @@ class Kategori extends CI_Controller {
 		$this->kategori_m->del($id);
 
 		if($this->db->affected_rows() > 0){
-			echo "<script>alert('data berhasil dihapus');</script>";
+			$this->session->set_flashdata('success', 'Data berhasil dihapus');
 		}
-		echo "<script>window.location='".site_url('kategori')."';</script>";
+		redirect('kategori');
     }
 
 	public function add(){
@@ -43,9 +43,9 @@ class Kategori extends CI_Controller {
 			$this->kategori_m->edit($post);
 		}
 		if($this->db->affected_rows() > 0){
-			echo "<script>alert('data berhasil disimpan');</script>";
+			$this->session->set_flashdata('success', 'Data berhasil disimpan');
 		}
-		echo "<script>window.location='".site_url('kategori')."';</script>";
+		redirect('kategori');
 	}
 
 	public function edit($id){

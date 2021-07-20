@@ -39,7 +39,7 @@
                         <select id="kategori" class="form-control" name="kategori"> 
                             <option value="">Pilih Kategori</option> 
                              <?php foreach($kategori->result() as $key=>$data) { ?>
-                             <option value="<?=$data->id_kategori ?>" <?=$data->id_kategori == $row->id_kategori ? "selected": null ?>><?=$data->kategori ?></option>
+                             <option value="<?=$data->id_kategori?>" <?=$data->id_kategori == $row->id_kategori ? "selected": null ?>><?=$data->kategori?></option>
                              <?php } ?>        
                         </select> 
                     </div>
@@ -59,6 +59,14 @@
                     </div>
                     <div class="form-group "> <!--from untuk nama dengann menggunakan nama-->
                         <label>Gambar</label>
+                        <?php {
+                            if($row->gambar !=null){?>
+                            <div>
+                            <img src="<?=base_url('uploads/poduct/'.$row->gambar)?>" style="width:100px">
+                            </div>
+                            <?php
+                            }
+                        }?>
                         <input type="file" class="form-control form-control-user"  
                             id="gambar" name="gambar"  > 
                     </div>
