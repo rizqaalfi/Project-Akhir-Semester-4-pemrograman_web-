@@ -6,7 +6,7 @@ class Item_m extends CI_Model {
 	{
         $this->db->from('tbl_produk');
         $this->db->join('tbl_kategori', 'tbl_kategori.id_kategori=tbl_produk.kategori_prd');
-        $this->db->join('tbl_unit', 'tbl_unit.id=tbl_produk.id');
+        
         if($id != null){
             $this->db->where('id_prd', $id);
             

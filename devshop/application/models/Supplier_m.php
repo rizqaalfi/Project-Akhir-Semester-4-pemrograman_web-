@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Supplier_m extends CI_Model {
 	public function get($id=null)
 	{
-        $this->db->from('supplier');
+        $this->db->from('tbl_supplier');
         if($id != null){
             $this->db->where('id', $id);
         }

@@ -27,7 +27,7 @@
                         <th>kode</th>
                         <th>nama</th>
                         <th>kategori</th>
-                        <th>unit</th>
+                        
                         <th>harga</th>
                         <th>stok</th>
                         <th>gambar</th>
@@ -42,11 +42,11 @@
                         <td><?=$data->id_prd?></td>
                         <td><?=$data->nama_prd?></td>
                         <td><?=$data->nama_kategori?></td>
-                        <td><?=$data->unit?></td>
+                        
                         <td><?=$data->harga_prd?></td>
                         <td><?=$data->stok_prd?></td>
                         <td>
-                            <img src="<?=base_url('uploads/poduct/'.$data->gambar_prd)?>" style="width:100px">
+                            <img src="<?=base_url('uploads/product/'.$data->gambar_prd)?>" style="width:100px">
                         </td>
                         <td class= "text-center" width="160px">
                             <a href="<?=site_url('item/edit/'.$data->id_prd)?>" class="btn btn-primary btn-xs">
