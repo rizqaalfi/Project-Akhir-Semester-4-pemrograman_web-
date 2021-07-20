@@ -24,7 +24,7 @@
                <tbody>
                  <?php foreach ($produk as $row) { ?>
                    <tr>
-                     <td class="product-thumbnail"><a href="#"><img src="<?php echo base_url('assets/cust/devita/images/' . $row->gambar_prd) ?>" alt="product img" /></a></td>
+                     <td class="product-thumbnail"><a href="#"><img src="<?php echo base_url('uploads/product/' . $row->gambar_prd) ?>" alt="product img" /></a></td>
                      <td class="product-name"><a href="#"><?php echo $row->nama_prd ?></a></td>
                      <td class="product-price"><span class="amount"><?php echo $row->harga_prd ?></span></td>
                      <td class="product-quantity"><input type="number" value="<?php echo $row->qty ?>" /></td>

@@ -59,7 +59,7 @@
         <!-- Start Product MEnu -->
         <div class="row">
           <div class="col-md-12">
-            <div class="filter__menu__container">
+            <div class="filter__menu__container" id="kategori">
               <div class="product__menu">
                 <button data-filter="*" class="is-checked">Semua</button>
                 <?php
@@ -89,7 +89,7 @@
                   <div class="product__inner">
                     <div class="pro__thumb">
                       <a href="<?php echo  base_url('home/detailProduk/' . $row->id_prd) ?>">
-                        <?php echo '<img height="350" src="' . base_url('assets/cust/devita/images/' . $row->gambar_prd) . '" >'; ?>
+                        <?php echo '<img height="350" src="' . base_url('uploads/product/' . $row->gambar_prd) . '" >'; ?>
 
                       </a>
                     </div>
@@ -132,3 +132,12 @@
   </section>
 </div>
 <!-- End Our Product Area -->
+
+<!-- <script>
+  $(document).ready(function() {
+    $('#kategori').change(function() {
+      let a = $(this).val()
+      console.log(a)
+    });
+  });
+</script> -->

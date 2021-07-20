@@ -14,7 +14,7 @@ foreach ($produk as $row) { ?>
               <div class="product__big__images">
                 <div class="portfolio-full-image tab-content">
                   <div role="tabpanel" class="tab-pane fade in active product-video-position" id="img-tab-1">
-                    <?php echo '<img height="600" width="500" src="' . base_url('assets/cust/devita/images/' . $row->gambar_prd) . '" >'; ?>
+                    <?php echo '<img height="600" width="500" src="' . base_url('uploads/product/' . $row->gambar_prd) . '" >'; ?>
                     <div class="product-video">
                       <a class="video-popup" href="#">
                         <i class="zmdi zmdi-videocam"></i> View Video
