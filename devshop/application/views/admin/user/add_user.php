@@ -21,11 +21,11 @@
                                 id="username" name="username" placeholder="Username"> 
                                 <?=form_error('username')?>
                             </div> 
-                            <div class="form-group <?=form_error('nama') ? 'has-error':null?>"> <!--from untuk nama dengann menggunakan nama-->
+                            <div class="form-group <?=form_error('email') ? 'has-error':null?>"> <!--from untuk nama dengann menggunakan nama-->
                                 <label>Name</label>
-                                <input type="nama" class="form-control form-control-user" value="<?=set_value('nama')?>" 
-                                id="nama" name="nama" placeholder="Nama Lengkap" > 
-                                <?=form_error('nama')?>
+                                <input type="nama" class="form-control form-control-user" value="<?=set_value('email')?>" 
+                                id="email" name="email" placeholder="Nama Lengkap" > 
+                                <?=form_error('email')?>
                             </div>  
                             <div class="form-group <?=form_error('pass') ? 'has-error':null?>"> <!--from untuk password dengann menggunakan pass-->
                                 <label>Password</label>

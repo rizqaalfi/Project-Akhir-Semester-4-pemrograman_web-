@@ -5,7 +5,7 @@ class Item extends CI_Controller {
     function __construct()
 	{
 		parent::__construct();
-		$this->load->model(['item_m', 'kategori_m', 'unit_m']); 
+		$this->load->model(['item_m', 'kategori_m']); 
 	}
 
 	public function index()
@@ -41,13 +41,13 @@ class Item extends CI_Controller {
 		
 
         $kategori =$this->kategori_m->get();
-        $unit =$this->unit_m->get();
+        
 
 		$data = array(
 			'page'=> 'add',
 			'row'=> $item,
             'kategori'=>$kategori,
-            'unit'=>$unit
+ 
 		);
 
 		$this->template->load('admin/template','admin/product/form_item', $data);

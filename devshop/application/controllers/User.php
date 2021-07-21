@@ -17,8 +17,8 @@ class User extends CI_Controller {
 
 	public function add(){
 		$this->load->library('form_validation');
-		$this->form_validation->set_rules('username', 'Username', 'required|is_unique[user.username]');
-		$this->form_validation->set_rules('nama', 'nama', 'required');
+		$this->form_validation->set_rules('username', 'Username', 'required|is_unique[tbl_user.username]');
+		$this->form_validation->set_rules('email', 'email', 'required');
 		$this->form_validation->set_rules('pass', 'Password', 'required|min_length[8]');
 		$this->form_validation->set_rules('passconf', 'Password Confirmation', 'required|matches[pass]',
 			array('matches' => '%s tidak sesuai dengan password')
