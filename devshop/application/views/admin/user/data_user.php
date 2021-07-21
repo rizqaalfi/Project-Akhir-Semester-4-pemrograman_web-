@@ -24,7 +24,7 @@
                     <tr>    
                         <th>No</th>
                         <th>Username</th>
-                        <th>Nama</th>
+                        <th>Email</th>
                         <th>Level</th>
                         <th>Actions</th>
                     </tr>
@@ -35,15 +35,12 @@
                     <tr>
                         <td style="width:5%;"><?=$no++?></td>
                         <td><?=$data->username?></td>
-                        <td><?=$data->nama?></td>
+                        <td><?=$data->email?></td>
                         <td><?=$data->grup == 1 ? "Admin" : "Customer" ?></td>
                         <td class= "text-center" width="160px">
-                            <a href="<?=site_url('user/edit/')?>" class="btn btn-primary btn-xs">
-                                <i class="fa fa-pencil"></i>Update
-                            </a>
 
                             <form action="<?=site_url('user/del')?>" method="post">
-                                <input type="hidden" name="id" value="<?=$data->id?>">
+                                <input type="hidden" name="id" value="<?=$data->id_user?>">
                                 <button onclick="return confirm('Yakin ingin menghapus data??')" class="btn btn-danger btn-xs">
                                     <i class="fa fa-trash"></i>Delete
                                 </button>

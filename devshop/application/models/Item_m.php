@@ -33,7 +33,7 @@ class Item_m extends CI_Model {
             'M'=> $post['m'],
             'L'=> $post['l'],
             'XL'=> $post['xl'],
-            'deskripsi'=> $post['deskripsi'],
+            'deskripsi_prd'=> $post['deskripsi'],
             'gambar_prd'=> $post['gambar_prd'],
         ];
         $this->db->insert('tbl_produk', $params);
