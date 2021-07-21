@@ -38,7 +38,7 @@
     <div class="login-box-body">
       <p class="login-box-msg">Sign in to start your session</p>
 
-      <form action="<?php echo base_url('Auth/cek_log') ?>" method="post">
+      <form action="<?php echo base_url('Auth/cek_log/') ?>" method="post">
         <div class="form-group has-feedback">
           <input type="text" class="form-control" placeholder="Username" name="username">
           <span class="glyphicon glyphicon-user form-control-feedback"></span>
@@ -63,17 +63,11 @@
         </div>
       </form>
 
-      <div class="social-auth-links text-center">
-        <p>- OR -</p>
-        <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using
-          Facebook</a>
-        <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using
-          Google+</a>
-      </div>
+
       <!-- /.social-auth-links -->
 
       <a href="#">I forgot my password</a><br>
-      <a href="register.html" class="text-center">Register a new membership</a>
+      <a href="<?php echo base_url('home/register') ?>" class="text-center">Register a new membership</a>
 
     </div>
     <!-- /.login-box-body -->
