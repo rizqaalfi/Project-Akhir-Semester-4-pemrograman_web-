@@ -238,31 +238,7 @@ $getGrup = $this->session->userdata('session_grup');
                 <li <?= $this->uri->segment(1) == 'item' ? 'class="active"' : '' ?>><a href="<?= site_url('item') ?>"><i class="fa fa-circle-o"></i> Items</a></li>
               </ul>
             </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-shopping-cart"></i>
-                <span>Transaction</span>
-                <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="../layout/top-nav.html"><i class="fa fa-circle-o"></i> Sales</a></li>
-                <li><a href="../layout/boxed.html"><i class="fa fa-circle-o"></i> Stock In</a></li>
-                <li><a href="../layout/fixed.html"><i class="fa fa-circle-o"></i> Stock Out</a></li>
-              </ul>
-            </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-pie-chart"></i>
-                <span>Report</span>
-                <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="../layout/top-nav.html"><i class="fa fa-circle-o"></i> Sales</a></li>
-                <li><a href="../layout/boxed.html"><i class="fa fa-circle-o"></i> Stock</a></li>
-              </ul>
-            </li>
+
             <li class="header">Setting</li>
             <li><a href="<?= site_url('user') ?>"><i class="fa fa-user"></i> <span>User</span></a>
             </li>
