@@ -17,7 +17,7 @@ class User extends RestController
 
   public function index_get()
   {
-    $id = $this->get('id');
+    $id = $this->get('id_user');
     if ($id === null) {
       $data = $this->data->getData();
     } else {

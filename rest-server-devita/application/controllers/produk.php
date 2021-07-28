@@ -18,7 +18,7 @@ class Produk extends RestController
   // ambil semua produk
   public function index_get()
   {
-    $id = $this->get('id');
+    $id = $this->get('id_prd');
     if ($id === null) {
       $data = $this->data->getData();
     } else {
